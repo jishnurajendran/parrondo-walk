@@ -1,0 +1,687 @@
+%% LyX 2.0.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english,aps,pra,amsmath,amssymb,showpacs,twocolumn]{revtex4-1}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{amsmath}
+\usepackage{mathtools}
+%\usepackage{hyperref}
+\usepackage{sidecap}
+\usepackage[figuresleft]{rotating}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{subfigure}
+\usepackage{graphicx}
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+ % Fix a bug in REVTeX 4.1
+ \def\lovname{List of Videos}
+ \@ifundefined{textcolor}{}
+ {%
+   \definecolor{BLACK}{gray}{0}
+   \definecolor{WHITE}{gray}{1}
+   \definecolor{RED}{rgb}{1,0,0}
+   \definecolor{GREEN}{rgb}{0,1,0}
+   \definecolor{BLUE}{rgb}{0,0,1}
+   \definecolor{CYAN}{cmyk}{1,0,0,0}
+   \definecolor{MAGENTA}{cmyk}{0,1,0,0}
+   \definecolor{YELLOW}{cmyk}{0,0,1,0}
+ }
+\theoremstyle{plain}
+\newtheorem{thm}{\protect\theoremname}
+
+\makeatother
+
+\usepackage{babel}
+\providecommand{\theoremname}{Theorem}
+
+\begin{document}
+
+\title{Parrondo's paradox in a quantum walk needs some entanglement}
+\author{Jishnu Rajendran}
+\email{jishnu.r@niser.ac.in}
+
+\author{Colin Benjamin}
+\email{colin@niser,ac,in}
+
+\affiliation{National Institute of Science Education and Research,Bhubaneswar, India }
+\begin{abstract}
+Earlier proposals on demonstrating Parrando's paradox using quantum walks failed in the asymptotic limits. In this work we show that aided with some amount of entanglement we can observe a genuine Parrando's paradox using quantum walks.  
+\end{abstract}
+\maketitle
+\section{Introduction}
+Parrando's paradox consists of a sequence of games,individually each of them are losing games,provides a winning situation when played in a deterministic or random manner. It has been shown that Parrando's games have important applications in many physical and biological systems \cite{control}. Quantum version of parrando's games are introduced in \cite{flitney}- \cite{chandru}. Quantum version of classical random walk was first introduced in 1993 in \cite{1993}.
+
+
+Here Parrando's games are explored using 1-Dimensional discrete time quantum walk(DTQW). When a game is played, the net expectation of position of walker is used to define winning and losing strategy. It has been already shown that Parrando's paradox does not exist in asymptotic limits in \cite{flitney},\cite{minli}.
+
+\section{Motivation}
+\section{Parrondo's game}
+\label{pg}
+In a game of chess, pieces can sometimes be
+sacrificed in order to win the overall game.
+Similarly, engineers know that two unstable
+systems, if combined in the right way, can
+paradoxically become stable. But can two
+losing gambling games be set up such that,
+when they are played one after the other,
+they becoming winning? The answer is yes.
+This is a striking new result in game theory
+called Parrondo’s paradox, after its discoverer, Juan Parrondo
+\par
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.4]{parr.png}
+\caption{
+\emph{
+ Game rules and simulation.  \textbf{a} , An example of two
+games, consisting of only three biased coins, which demonstrate
+Parrondo’s paradox, where $p_{1}$, $p_{2}$ and $p_{3}$ are the probabilities of winning for the individual coins.For a game $A$,if $\epsilon = 0.005$ and $p_{1}=1/2 - \epsilon $, then it is a losing game.For game $B$,if $p_{2}=1/10 - \epsilon $, $p_{3}=3/4 -\epsilon $ and $M=3$ then we end up with coin 3 more often that coin 2 .But coin 2 has a poor probability of winning, so $B$ is a losing game. The paradox is that playing games $A$
+and $B$ in any sequence leads to a win.. \textbf{b}, The progress of playing
+games $A$ and $B$ individually and when switching between them.
+The simulation was performed by playing game A twice and game
+B twice, and so on, until $100$ games were played; this is indicated
+by the line labelled ‘Periodic’. Randomly switched games result in
+the line labelled ‘Random’. The results were averaged from $50000$ trials with $\epsilon = 0.005$. }  }\label{parr}
+\end{center}
+\end{figure}
+In Parrondo's game, in its usually form as a gambling game,
+a single agent plays against a bank, with the choice of two games $A$ and $B$,
+whose results are determined by the toss of biased coins.
+Each of these games is losing when played in isolation
+but when played alternately or in some other deterministic or random sequence
+(such as $ABAB$, etc.) can become a winning game. Because of its anti-intuitive nature, Parrondo's games are also referred to as Parrondo's paradox.
+Standard form of Parrondo's game involves games of chance. Two games, $A$ and $B$, when played individually, produce a losing expectation. An apparently paradoxical situation arises when the two games are played in an alternating order, a winning expectation is produced. The apparent paradox that two losing games $A$ and $B$ can produce a winning outcome when played in an alternating sequence was devised by Parrondo as a pedagogical illustration of the Brownian ratchet. However, Parrondo's games have important applications in many physical and biological systems, combining processes lead to counterintuitive dynamics. For example, in control theory, the combination of two unstable systems can cause them to become stable. In the theory of granular flow, drift can occur in a counterintuitive direction. Also, the switching between two transient diffusion processes in random media can form a positive recurrent process. There are actually many ways to construct such gambling scenarios, the simplest of which uses three biased coins.A model of such a game is presented in the Figure (\ref{parr}(a)).Game $A$ consists of tossing a biased
+coin (coin 1) that has a probability ($p_{1}$)of
+winning of less than half, so it is a losing
+game. Let $p_{1}=1/2 - \epsilon $  where $\epsilon$, the bias, 
+can be any small number, say $0.005$.Game $B$
+ (\ref{parr}(a)) consists of playing
+with two biased coins. The rule is that we
+play coin $2$ if our capital is a multiple of an
+integer $M$ and play coin $3$ if it is not. The
+value of $M$ is not important, but for simplicity let us say that $M=3$. This means that, on average, coin 3 would be played a little more often than coin $2$. If we assign a
+poor probability of winning to coin $2$, such
+as $p_{2} = 1/10 -\epsilon $, then this would outweigh
+the better coin 3 with $p_{3} = 3/4  - \epsilon$, making
+game $B$ a losing game overall.\\
+Thus both $A$ and $B$ are losing games, as
+can be seen in Figure \ref{parr}b, where the two lower
+lines indicate declining capital. If we play
+two games of $A$ followed by two of $B$ and so
+on, this periodic switching results in the
+upper line in Figure. \ref{parr}b, showing a rapid
+increase in capital — this is Parrondo’s paradox. What is even more remarkable is that
+when games A and B are played randomly,
+with no order in the sequence, this still produces a winning expectation (Fig.\ref{parr}b).
+
+\section{Parrondo's game using DTQW}
+\label{pgqw}
+
+Parrondo's games arise in the situation when we have two
+games that are losing when played seperately, but the two games played
+in combination will form an overall winning game.
+\par
+ \begin{figure}[h]
+\begin{centering}
+\includegraphics[scale =0.7]{winloss}
+\par\end{centering}
+
+\caption{\emph{Pictorial illustration of the conditions for win or loss for QWs on
+a line.}}
+\label{fig:win-loss}
+\end{figure}
+Consider two games A and B,there are two ways to approach the parrondo's game in DTQW,First one, two games are alternatively played
+according to the time and other one in the position.
+Here we consider the second approach, i.e.,alternating in position.
+\par
+For the following quantum walk we consider $SU(2)$ matrix 
+\begin{equation}
+U_{\alpha,\beta,\gamma}^{S}=\left(\begin{array}{cc}
+e^{i\alpha}\cos\beta & -e^{-i\gamma}\sin\beta\\
+e^{i\gamma}\sin\beta & e^{-i\alpha}\cos\beta
+\end{array}\right),\label{eq:SU(2)}
+\end{equation}
+instead of Hadamard operator 
+
+The game is constructed as follows:
+\begin{itemize}
+\item Both game A and B are represented by different quantum operators $U(\alpha_{A},\beta_{A},\gamma_{A})$
+and $U(\alpha_{B},\beta_{B},\gamma_{B})$.
+\item The state is in $\mid\Psi_{0}\rangle=\frac{1}{\sqrt{2}}\mid n=0\rangle(\mid 0\rangle+i\mid 0\rangle)$
+initially.
+\item Game \emph{A} and \emph{B} are played alternately in different positions
+in one step, instead of step by step. i.e. game A is played on site
+$x=nq$ and game B is played on site $x\neq nq$. The evolution operator
+can be written as:
+\begin{equation}
+U=\sum_{x=nq,n\in Z}\hat{S}_{x}U(\alpha_{A},\beta_{A},\gamma_{A})+\sum_{x\neq nq,n\in Z}\hat{S}_{x}U(\alpha_{B},\beta_{B},\gamma_{B}),
+\end{equation}
+where $q$ is the period, $n$ is an integer, and the final state
+after $N$ steps is given by
+\begin{equation}
+\mid\Psi_{N}\rangle=U^{N}\mid\Psi_{0}\rangle.
+\end{equation}
+For $q=3$, it means we play games with the sequence ABBABB on the
+line.
+\end{itemize}
+As denoted in Fig. \ref{fig:win-loss}, after $N$ steps, if the probability
+$P_{R}$ of the walker to be found in the right of the origin, is
+greater than the probability $P_{L}$ in the left of the origin, that
+is $P_{R}-P_{L}>0$, we consider the player win $P_{R}-P_{L}$. Similarly,
+if $P_{R}-P_{L}<0$, the player losses $P_{L}-P_{R}$. If $P_{R}-P_{L}=0$,
+it means the player neither losses nor wins.
+
+
+ \begin{figure}[H]
+\begin{centering}
+\includegraphics[scale =0.7]{dwpar.jpg}
+\par\end{centering}
+
+\caption{\emph{An example for different games and there probability distribution,we can see the red one favors right,green one left,blue dashed one to right and dashed one to left. }}
+\label{fig:game}
+\end{figure}
+By making use of above scheme we have constructed Parrondo's games by using the one-dimensional
+discrete time quantum walks. The game is constructed by two lossing
+games \emph{A} and \emph{B} with two different biased coin operators
+$U_{A}(\alpha_{A},\beta_{A},\gamma_{A})$ and $U_{B}(\alpha_{B},\beta_{B},\gamma_{B})$. With a
+number of selections of $\alpha_{A},\beta_{A},\gamma_{A},\alpha_{B},\beta_{B},\gamma_{B}$,
+we can form a winning game with sequences \emph{ABB, ABBB}, \emph{et
+al}. If we set $\beta_{A}=45,\gamma_{A}=0,\alpha_{B}=0,\beta_{B}=88$,
+we find the \emph{game 1 }with $U_{A}^{S}=U^{S}(-51,45,0)$, $U_{B}^{S}=U^{S}(0,88,-16)$
+will win most. If we set $\alpha_{A}=0,\beta_{A}=45,\alpha_{B}=0,\beta_{B}=88$,
+the \emph{game 2} with $U_{A}^{S}=U^{S}(0,45,-51)$, $U_{B}^{S}=U^{S}(0,88,-67)$
+will win most. And \emph{game 1 }is equivalent to the \emph{game}
+\emph{2 }with the changes of sequences and steps. But at a large enough
+steps, the game will loss. 
+
+
+ \begin{figure}[H]
+\begin{centering}
+\includegraphics[scale =1]{qwparr.jpg}
+\par\end{centering}
+
+\caption{\emph{ $P_{R}-P_{L}$ of the walker for QWs after $t$ steps,
+with initial state $\mid\Psi_{0}\rangle=1/\sqrt{2}(\mid0L\rangle+i\mid0R\rangle)$,
+and coin operator $U^{S}(-51,45,0)$ (red line) or $U^{S}(0,88,-16)$
+(green line).}}
+\label{fig:lossing_game}
+\end{figure}
+
+ \begin{figure}[H]
+\begin{centering}
+\includegraphics[scale =0.7]{tran.png}
+\par\end{centering}
+
+\caption{\emph{ $P_{R}-P_{L}$ of the walker after QWs different steps
+with $q=3$, $U_{A}^{S}=U^{S}(-51,45,0)$, $U_{B}^{S}=U^{S}(0,88,-16)$.
+(first 250 steps)}}
+\label{fig:game250}
+\end{figure}
+
+ \begin{figure}[H]
+\begin{centering}
+\includegraphics[scale =0.7]{pd.png}
+\par\end{centering}
+\caption{\emph{ $P_{R}-P_{L}$ of the walker after QWs different steps
+with $q=3$, $U_{A}^{S}=U^{S}(-51,45,0)$, $U_{B}^{S}=U^{S}(0,88,-16)$.
+(1200 steps)}}
+\label{fig:game1200}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\section{Entangled Quantum Walk}
+\subsection{Mathematical Structure of Quantum Walks on an Infinite Line Using
+a Maximally Entangled Coin}
+
+As before, the elements of an unrestricted quantum walk on a line
+are a walker, a coin, evolution operators for both coin and walker,
+and a set of observables. We shall provide a detailed description of
+each element motivated by the previous subsection.
+
+\noindent\emph{\textbf{Walker and Coin:}}  The walker is, as in the
+unrestricted quantum walk with a single coin, a quantum system
+$|\text{position}\rangle$ residing in a Hilbert space of infinite
+but countable dimension ${\cal H}_P$. The canonical basis states $|i
+\rangle_P$ that span ${\cal H}_P$, as well as any superposition 
+of the form $\sum_{i} \alpha_i|i\rangle_p$ subject to
+$\sum_i|\alpha_i|^2 = 1$, are valid states for the walker.
+The walker is usually initialized at the \lq origin' i.e.
+$|\text{position}\rangle_0 = |0\rangle_P$.
+
+The coin is now an entangled system of two qubits i.e. a quantum
+system living in a 4-dimensional Hilbert space ${\cal H}_{EC}$. 
+We denote coin initial states as $|\text{coin}\rangle_0$. Also, 
+we shall use the following Bell states as coin initial states 
+\begin{subequations}
+\begin{equation}\label{bell1}
+|\Phi^+\rangle = \frac{1}{\sqrt{2}} (|00\rangle + |11\rangle)
+\end{equation}
+\begin{equation}\label{bell2}
+|\Phi^-\rangle = \frac{1}{\sqrt{2}} (|00\rangle - |11\rangle)
+\end{equation}
+\begin{equation}\label{bell3}
+|\Psi^+\rangle = \frac{1}{\sqrt{2}} (|01\rangle + |10\rangle)
+\end{equation}
+\end{subequations}
+which are maximally entangled pure bipartite states with reduced von
+Neumann entropy equal to unity. We shall examine the consequences of
+employing such maximally entangled states by comparing the resulting
+walks with those resulting from using maximally correlated coins in
+classical random walks. The Bell singlet state $|\Psi^-\rangle =
+\frac{1}{\sqrt{2}} (|01\rangle - |10\rangle)$ is not employed as an
+entangled coin as it is left invariant when the same local unitary
+operator is applied to both coins.
+
+
+The total initial state of the quantum walk resides in the Hilbert space
+${\cal H}_T = {\cal H}_P \otimes {\cal H}_{EC}$ and has the form
+\begin{equation}
+|\psi\rangle_0 = |\text{position}\rangle_0 \otimes
+|\text{coin}\rangle_0
+\end{equation}
+
+\noindent\emph{\textbf{Entanglement measure:}}
+In order to quantify the degree of entanglement of the coins
+used in this paper, we shall employ the reduced von Neumann entropy
+measure. For a pure quantum state $| \psi \rangle$ of a composite
+system $AB$ with $\text{dim}(A) = d_A$ and $\text{dim}(B) = d_B$,
+let $|\psi \rangle = \sum_{i=1}^d \alpha_i |i_A\rangle |i_B\rangle$,
+($d$ = min($d_A$,$d_B$), $\alpha_i \geq 0$ and $\sum_{i=1}^d \alpha_i^2 = 1$) be its
+Schmidt decomposition. Also, let $\rho_A = \text{tr}_B(|\psi\rangle \langle \psi|)$
+and $\rho_B = \text{tr}_A(|\psi\rangle \langle \psi|)$ be the reduced density
+operators of systems $A$ and $B$ respectively. {\it The entropy of entanglement}
+$E(|\psi\rangle)$ is the von Neumann entropy of the reduced density operator %\cite{bennett96}
+
+\begin{equation}
+E(|\psi\rangle) = S(\rho_A) = S(\rho_B) = - \sum_{i=1}^d \alpha_i^2 \log_2 (\alpha_i^2).
+\label{von_neumann}
+\end{equation}
+$E$ is a monotonically-increasing function of the entanglement present in the system
+$AB$. A non-entangled state has $E=0$.
+States $|\psi\rangle \in {\cal H}^d$ for which $E(\psi) = d$ are called {\it maximally
+entangled states} in $d$ dimensions. In particular, note that
+for those quantum states described by Eqs. (\ref{bell1}),
+(\ref{bell2}) and (\ref{bell3}) 
+$E(|\Phi^+\rangle) = E(|\Phi^-\rangle) = E(|\Psi^+\rangle) = 1$,
+i.e. these states are maximally entangled.
+
+
+
+\noindent\emph{\textbf{Evolution Operators:}}  The evolution
+operators used are more complex than those for quantum walks with
+single coins. As in the single coin case, the only requirement
+evolution operators must fulfill is that of unitarity.
+
+Let us start by defining evolution operators for an entangled coin.
+Since the coin is a bipartite system, its evolution operator is
+defined as the tensor product of two single-qubit coin operators:
+\begin{equation}
+\hat{C}_{EC} = \hat{C} \otimes \hat{C}
+\end{equation}
+For example, we could define the operator $\hat{C}_{EC}^H$ as the
+tensor product $\hat{H}^{\otimes 2}$:
+\begin{equation}\label{hadamard_tensor}
+\begin{split}
+\hat{C}_{EC}^H = & {1 \over 2}(|00\rangle \langle 00| + |01\rangle
+\langle 00| + |10\rangle
+\langle 00| + |11\rangle \langle 00| \\
+& + |00\rangle \langle 01| - |01\rangle \langle 01| + |10\rangle
+\langle 01| -
+|11\rangle \langle 01| \\
+& + |00\rangle \langle 10| + |01\rangle \langle 10| - |10\rangle
+\langle 10| -
+|11\rangle \langle 10| \\
+& + |00\rangle \langle 11| - |01\rangle \langle 11| - |10\rangle
+\langle 11| + |11\rangle \langle 11|).
+\end{split}
+\end{equation}
+An alternative bipartite coin operator is produced by computing the
+tensor product $\hat{Y}^{\otimes 2}$ where $\hat{Y}
+=\frac{1}{\sqrt{2}}(|0\rangle \langle 0| + i|0\rangle \langle 1|+
+i|1\rangle \langle 0| + |1\rangle \langle 1|)$, namely
+%$Y =\frac{1}{\sqrt{2}}\begin{pmatrix} 1 & i\\ i & 1\end{pmatrix}$:
+\begin{equation}\label{y_tensor}
+\begin{split}
+\hat{C}_{EC}^Y = & {1 \over 2} ( |00\rangle \langle 00| +
+i|01\rangle \langle 00| + i|10\rangle
+\langle 00| - |11\rangle \langle 00| \\
+& + i|00\rangle \langle 01| + |01\rangle \langle 01| - |10\rangle
+\langle 01|
++ i|11\rangle \langle 01| \\
+& + i|00\rangle \langle 10| - |01\rangle \langle 10| + |10\rangle
+\langle 10|
++ i|11\rangle \langle 10| \\
+& - |00\rangle \langle 11| + i|01\rangle \langle 11| + i|10\rangle
+\langle 11| + |11\rangle \langle 11|).
+\end{split}
+\end{equation}
+
+
+Both coin operators are fully separable, thus any entanglement
+in the coins is due to the initial states used.
+
+
+The conditional shift operator $\hat{S}_{EC}$ necessarily allows the
+walker to move either forwards or backwards along the line,
+depending on the state of the coin. The operator
+
+\begin{equation}\label{shift_operator_two_spins}
+\begin{split}
+{\hat S}_{EC} = |00\rangle_{cc} \langle 00| \otimes \sum_i |i+1
+\rangle_{pp}
+\langle i| \\
++ |01\rangle_{cc} \langle 01| \otimes \sum_i |i\rangle_{pp} \langle i| \\
++ |10\rangle_{cc} \langle 10| \otimes \sum_i |i\rangle_{pp} \langle i|\\
++ |11\rangle_{cc} \langle 11| \otimes \sum_i |i-1 \rangle_{pp}
+\langle i|
+\end{split}
+\end{equation}
+embodies the stochastic behaviour of a classical random walk with a
+maximally correlated coin pair. It is only when both coins reside in
+the $|00\rangle$ or $|11\rangle$ state that the walker moves either
+forwards or backwards along the line; otherwise the walker does not
+move.
+
+Note that $\hat{S}_{EC}$ is one of a family of valid definable shift
+operators. Indeed, it might be troublesome to identify a classical
+counterpart for some of these operators: their existence is uniquely
+quantum-mechanical in origin. One such alternative operator is
+\begin{equation}\label{shift_operator_s2}
+\begin{split}
+{\hat S}_{EC}' = |00\rangle_{cc} \langle 00| \otimes \sum_i |i+2
+\rangle_{pp}
+\langle i| \\
++ |01\rangle_{cc} \langle 01| \otimes \sum_i |i+1\rangle_{pp} \langle i| \\
++ |10\rangle_{cc} \langle 10| \otimes \sum_i |i-1\rangle_{pp} \langle i|\\
++ |11\rangle_{cc} \langle 11| \otimes \sum_i |i-2 \rangle_{pp}
+\langle i|.
+\end{split}
+\end{equation}
+
+The total evolution operator has the structure ${\hat U}_T = {\hat
+S_{EC}}.({\hat C_{EC}} \otimes \mathbb{{\hat I}}_p)$ and a succint
+mathematical representation of a quantum walk after $N$ steps is 
+$|\psi \rangle = ({\hat U}_T)^N |\psi\rangle_0$, where $|\psi\rangle_0$
+denotes the initial state of the walker and the coin.\\
+\noindent\emph{\textbf{Observables:}} The observables defined here
+are used to extract information about the state of the quantum walk
+$| \psi \rangle = ({\hat U}_T)^N |\psi\rangle_0$.
+
+We first perform measurements on the coin using the observable
+\begin{equation}
+\begin{split}
+{\hat M}_{EC} = \beta_{00} |00\rangle_{cc}\langle 00| + \beta_{01}
+|01\rangle_
+{cc}\langle 01|\\
+\beta_{10} |10\rangle_{cc}\langle 10|+\beta_{11}
+|11\rangle_{cc}\langle 11|.
+\end{split}
+\end{equation}
+Measurements are then performed on the position states using the
+operator
+\begin{equation}
+{\hat M}_P = \sum_j b_j |j\rangle_{PP}\langle j|.
+\end{equation}
+
+With the purpose of introducing the results presented
+in the rest of this paper we compare in Table 1 the 
+actual position probability values for a classical random walk
+on an infinite line (Eq. (\ref{prob_dist_crw})), and a
+quantum walk with initial state $|\Phi^+\rangle = {1 \over \sqrt{2}}(|00\rangle + |11\rangle)$
+and coin and shift operators given by Eqs. (\ref{hadamard_tensor})
+and (\ref{shift_operator_two_spins}), respectively.
+
+
+{\bf Table 3.} 
+Position Probability values for classical random walk and quantum walk
+\\
+\[\begin{array}{|c|c|c|c|c|c|c|c|}
+\hline
+\text{{\bf Classical}} & $-3$  & $-2$ & $-1$ & $ 0$ & $ 1$ & $ 2$ & $ 3$\\
+\hline
+\text{ Step } 0        & $0$   & $0$  & $0$  & $1$  & $0$ & $0$ & $0$\\
+\hline
+\text{ Step } 1        & $0$   & $0$  & $1/2$  & $0$  & $1/2$ & $0$ & $0$\\
+\hline
+\text{ Step } 2        & $0$  & $2/8$ & $0$ & $4/8$ & $0$ & $2/8$ & $0$\\
+\hline
+\text{ Step } 3        & $4/32$  & $0$ & $12/32$ & $0$ & $12/32$ & $0$ & $4/32$\\
+\hline
+\end{array}\]
+
+\[\begin{array}{|c|c|c|c|c|c|c|c|}
+\hline
+\text{{\bf Quantum}}   & $-3$   & $-2$   & $-1$   & $ 0$   & $ 1$   & $ 2$   & $ 3$\\
+\hline
+\text{ Step } 0        & $0$    & $0$    & $0$    & $1$    & $0$    & $0$    & $0$\\
+\hline
+\text{ Step } 1        & $0$    & $0$    & $1/2$  & $0$    & $1/2$  & $0$    & $0$\\
+\hline
+\text{ Step } 2        & $0$    & $1/8$  & $2/8$  & $2/8$  & $2/8$  & $1/8$  & $0$\\
+\hline
+\text{ Step } 3        & $1/32$ & $6/32$ & $5/32$ & $8/32$ & $5/32$ & $6/32$ & $1/32$\\
+\hline
+\end{array}\]
+
+\subsection{Results for Quantum Walks on an Infinite Line
+Using a Maximally Entangled Coin}
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.8]{enta.jpg}
+\caption{\emph{Coin initial state is
+$|\Phi^+\rangle = \frac{1}{\sqrt{2}} (|00\rangle + |11\rangle)$
+and the number of steps is $200$. Coin operators for red
+and dotted blue plots are given by Eq. (\ref{hadamard_tensor}).}} \label{fig:enta}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.8]{figure_phi_plus_c1_c2_color_100.eps}
+\caption{\emph{For both plots, coin initial state is
+$|\Phi^+\rangle = \frac{1}{\sqrt{2}} (|00\rangle + |11\rangle)$
+and the number of steps is $100$. Coin operators for red 
+and dotted blue plots are given by Eq. (\ref{hadamard_tensor})
+and Eq. (\ref{y_tensor}) respectively.}} \label{figure2}
+\end{center}
+\end{figure}
+
+\begin{figure}{ht}
+\begin{center}
+\includegraphics[scale=0.8]{figure_phi_plus_c1_c2_color_200.eps}
+\caption{\emph{For both plots, coin initial state is
+$|\Phi^+\rangle = \frac{1}{\sqrt{2}} (|00\rangle + |11\rangle)$
+and the number of steps is $200$. Coin operators for red
+and dotted blue plots are given by Eq. (\ref{hadamard_tensor})
+and Eq. (\ref{y_tensor}) respectively.}} \label{figure3}
+\end{center}
+\end{figure}
+In order to investigate the properties of unrestricted quantum walks
+with entangled coins, we have computed several simulations using
+bipartite maximally entangled coin states described by Eqs.~
+(\ref{bell1}), (\ref{bell2}) and (\ref{bell3}), and coin evolution
+operators described by Eqs. (\ref{hadamard_tensor}) and
+(\ref{y_tensor}). In all cases, the initial position state of the
+walker corresponds to the origin, i.e. $|\text{position}\rangle_0 =
+|0\rangle$. The shift operator employed is that of Eq.~(\ref{shift_operator_two_spins}).
+
+Let us first discuss the quantum walks whose graphs are shown in
+Fig.~(\ref{figure2}). The initial entangled coin state is given by
+Eq.~(\ref{bell1}) and the number of steps is $100$. For the red plot 
+in Fig.~(\ref{figure2}) the coin operator is given by Eq.~(\ref{hadamard_tensor}),
+while for the dotted blue plot in the same Fig.~(\ref{figure2})
+the coin operator is that of Eq.~(\ref{y_tensor}).
+
+The first notable property of these quantum walks is that, unlike
+the classical case in which the most probable location of the walker
+is at the origin and the probability distribution has a single peak,
+in the quantum case a certain range of very likely positions about
+the position $|0\rangle$ is evident but in addition there are a
+further two regions at the extreme zones of the walk in which it is
+likely to find the particle. This is the \lq three peak zones'
+property of the shift operator defined in this way. 
+The \lq three peak zones' property could mean an additional
+advantage of quantum walks over classical random walks. 
+
+
+We also note that the probability of finding the walker in the most
+likely position, $|0\rangle$, is much higher in the quantum case
+($\sim 0.171242$ in red plot of Fig.~(\ref{figure2}) and $\sim 0.221622$
+in dotted blue plot of Fig.~(\ref{figure2})) than in the classical
+case $(\sim 0.0795)$. Incidentally, we find that the use of different
+coin initial states maintains the basic structure of the probability
+distribution, unlike the quantum walk with a single coin in which
+the use of different coin initial states can lead to different probability
+distributions.
+
+The position probability distributions shown in Fig.~(\ref{figure2})
+could embody some advantages when used in an appropriate
+application framework. For example, let us suppose we want
+to design algorithms whose purpose is to find the wrong values
+in a proposed solution of a problem (a concrete case is
+to find all wrong binary values assigned to the initial
+conditions of the algorithm used in to
+find a solution to the 3-SAT problem.) 
+We use a $100$-steps classical random walk (Fig.~(\ref{Fig:1}))
+to design algorithm $C$ and a $100$-steps quantum walk with maximally
+entangled coins (red plot of Fig.~(\ref{figure2})) to design algorithm $Q$. 
+
+Depending on the actual number of wrong values, the probability 
+distribution of red plot of Fig. (\ref{figure2}) could help to
+make algorithm $Q$ faster than algorithm $C$. For example, if
+the number of wrong values is in the range $40$ - $70$,
+the probability of finding the quantum walker of 
+Fig. (\ref{figure2}) is much higher than finding the classical
+walker. Actual probability values
+(note the differences in orders of magnitude)  are shown in Table 4.
+It must be noted that employing a quantum walk
+on a line with a single coin for building algorithm $Q$ would also 
+produce higher probability values than a classical random walk in
+those positions shown in Table 4, thus the choice of quantum walk
+could depend on some other factors like implementation feasibility.
+%
+\\
+\\
+\begin{center}
+{\bf Table 4.} Position Probabilities for
+Classical and Quantum Walkers
+\\
+\begin{tabular}{|l|l|l|l|}
+
+\hline
+Position & Classical Walker          & Quantum Walker\\
+\hline
+40       & $2.31 \times 10^{-5}$    & $1.80 \times 10^{-3}$\\
+\hline
+50       & $1.91 \times 10^{-7}$    & $1.50 \times 10^{-3}$\\
+\hline
+60       & $4.22 \times 10^{-10}$     & $1.03 \times 10^{-2}$\\
+\hline
+70       & $1.99 \times 10^{-13}$    & $3.78 \times 10^{-2}$\\
+\hline
+\end{tabular}
+\\
+\end{center}
+
+
+
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.8]{figure_psi_plus_c1_c2_color.eps}
+\caption{\emph{Coin initial
+state is $|\Psi^+\rangle = \frac{1}{\sqrt{2}} (|01\rangle +
+|10\rangle). $Number of steps is $100$ for
+red and dotted blue plots and $200$ for starred
+yellow and black dotted plots. Coin operator for 
+red and starred yellow plots is given by
+Eq. (\ref{hadamard_tensor}), while coin operators
+for dotted blue and dotted black plots is given
+by Eq. (\ref{y_tensor}) respectively.}}\label{figure5}
+\end{center}
+\end{figure}
+
+
+A consequence of the previous two properties of the quantum walk is
+a sharper and narrower peak in the probability distribution around
+position $|0\rangle$. Again, this may be of some advantage depending
+on the application of the quantum walk (for example, less dispersion
+around the most likely solution to the computational problem posed
+in the two previous paragraphs).
+
+
+The probability distributions for quantum walks in
+Fig.~(\ref{figure3}) are very similar in structure to those of Fig.~
+(\ref{figure2}), the only difference being the number of steps (200
+as opposed to 100). For Fig.~(\ref{figure3}) the initial entangled
+coin state is given by Eq.~(\ref{bell1}). Eq.~(\ref{hadamard_tensor})
+is used as the coin operator in the red plot of Fig.~(\ref{figure3})
+whereas Eq.~(\ref{y_tensor}) is the coin operator for the dotted blue
+plot of Fig.~(\ref{figure3}). For $200$ steps the peaks on both
+extreme zones are smaller than for $100$ steps, the reason being
+the increased number of small probabilities that correspond to
+those regions between the extreme peaks and the central peak.
+A wider region is covered in the case of $200$ steps than for
+$100$ steps.
+
+
+
+Finally we would like to emphasize that in startling contrast to the
+probability distributions of the classical case in which only
+certain walker positions have a probability different from zero,
+namely those positions whose parity is that of the total number of
+steps, in the quantum cases presented in this paper we observe no
+such constraint on the numerical data produced.
+As stated in the introduction, the dynamics of
+classical random walks can remove the parity constraint
+by permitting the use of \lq rest sites' at the expense of
+varying the amount of correlation between the coins.
+\section{Quantum Walk with a partially entangled state}
+What happens when one uses a partially entangled state $\psi=\cos(\gamma/2)|10>+i\sin(\gamma/2)|01>$, with $\gamma=\pi/2$ is max entanglement while gamma = pi  and 0 are product states.
+
+If one considers at $AAA ..$ for first coin 1 and $BBB.. $ for coin 2 the difference between the probability to shift to right as agaisnt left is  $pr-pl$ is negative but for $ABAB...$  for coin 1 and  $BABA...$  for coin 2 the difference in right and left probability $pr-pl4$ is positive.
+\begin{figure*}[h]
+  \centering \subfigure[]{ \includegraphics[width=0.33\textwidth]{parr_enta_arbitary-1.pdf}}
+ \centering    \subfigure[]{ \includegraphics[width=.33\textwidth]{arr_enta_arbitary-2.pdf}}
+ 
+\vskip -0.2 in \caption{a) \small \sl Parando walk is evident in the asymptotic limit}
+\end{figure*}
+\begin{thebibliography}{10}
+\bibitem{Harmer} G. P. Harmer, D. Abbott, P. G. Taylor and J. M.
+R. Parrondo, in Proc. 2nd int. Conf. on Unsolved Problems of Noise
+and Fluctuations (UPoN '99), Adelaide, Australia, \textbf{511}, 189\textbf{
+}(1999). %Random Fluctuations: unsolved Problems of Noise.
+
+\bibitem{Parrondo-2000} J. M. R. Parrondo, G. P. Harmer, and D. Abbott,
+Phys. Rev. Lett. \textbf{85}, 5226\textendash{}5229 (2000). %New Paradoxical Games Based on Brownian Ratchets.
+
+\bibitem{control} 
+A. Allison and D. Abbott, "Control systems with stochastic feedback," Chaos, Vol. 11, No. 3, pp. 715-724, 2001.
+
+\bibitem{flitney} 
+A. P. Flitney,Quantum Parrondo's games using quantum walks, arXiv:quant-ph/1209.2252 (2012).
+
+\bibitem{minli}
+Min Li, Yong-Sheng Zhang, Guang-Can Guo, Qunatum Parrondo's games constructed by quantum random walk, arXiv:quant-ph/1303.6831 (2013).
+
+\bibitem{chandru}
+C. M. Chandrashekar, S. Banerjee, Physics Lett. A 375 (2011) 1553
+
+\bibitem{1993}
+Y. Aharonov, L. Davidovich, and N. Zagury, Phys. Rev. A 48, 1687 (1993).
+
+\bibitem{entagled}
+S.E. Venegas-Andraca, J.L. Ball, K. Burnett, S. Bose, Quantum Walks with Entangled Coins, 	New Journal of Physics 7 (2005) 221, 10.1088/1367-2630/7/1/221
+
+\end{thebibliography}
+
+\end{document}

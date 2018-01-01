@@ -1,0 +1,1499 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     60861,       1491]
+NotebookOptionsPosition[     46573,       1192]
+NotebookOutlinePosition[     60842,       1489]
+CellTagsIndexPosition[     60799,       1486]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<Quantum`Notation`\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SetQuantumAliases", "[", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Remove", "[", "\"\<Global`*\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"hadamard", "[", "j_", "]"}], ":=", 
+   RowBox[{
+    FractionBox["1", 
+     SqrtBox["2"]], 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       TagBox[
+        RowBox[{"\[VerticalSeparator]", 
+         TagBox[
+          SubscriptBox["0", 
+           OverscriptBox["j", "^"]],
+          Quantum`Notation`zz080KetArgs,
+          Editable->True,
+          Selectable->True], "\[RightAngleBracket]"}],
+        Quantum`Notation`zz080Ket,
+        Editable->False,
+        Selectable->False], "\[CenterDot]", 
+       TagBox[
+        RowBox[{"\[LeftAngleBracket]", 
+         TagBox[
+          SubscriptBox["0", 
+           OverscriptBox["j", "^"]],
+          Quantum`Notation`zz080BraArgs,
+          Editable->True,
+          Selectable->True], "\[VerticalSeparator]"}],
+        Quantum`Notation`zz080Bra,
+        Editable->False,
+        Selectable->False]}], "+", 
+      RowBox[{
+       TagBox[
+        RowBox[{"\[VerticalSeparator]", 
+         TagBox[
+          SubscriptBox["1", 
+           OverscriptBox["j", "^"]],
+          Quantum`Notation`zz080KetArgs,
+          Editable->True,
+          Selectable->True], "\[RightAngleBracket]"}],
+        Quantum`Notation`zz080Ket,
+        Editable->False,
+        Selectable->False], "\[CenterDot]", 
+       TagBox[
+        RowBox[{"\[LeftAngleBracket]", 
+         TagBox[
+          SubscriptBox["0", 
+           OverscriptBox["j", "^"]],
+          Quantum`Notation`zz080BraArgs,
+          Editable->True,
+          Selectable->True], "\[VerticalSeparator]"}],
+        Quantum`Notation`zz080Bra,
+        Editable->False,
+        Selectable->False]}], "+", 
+      RowBox[{
+       TagBox[
+        RowBox[{"\[VerticalSeparator]", 
+         TagBox[
+          SubscriptBox["0", 
+           OverscriptBox["j", "^"]],
+          Quantum`Notation`zz080KetArgs,
+          Editable->True,
+          Selectable->True], "\[RightAngleBracket]"}],
+        Quantum`Notation`zz080Ket,
+        Editable->False,
+        Selectable->False], "\[CenterDot]", 
+       TagBox[
+        RowBox[{"\[LeftAngleBracket]", 
+         TagBox[
+          SubscriptBox["1", 
+           OverscriptBox["j", "^"]],
+          Quantum`Notation`zz080BraArgs,
+          Editable->True,
+          Selectable->True], "\[VerticalSeparator]"}],
+        Quantum`Notation`zz080Bra,
+        Editable->False,
+        Selectable->False]}], "-", 
+      RowBox[{
+       TagBox[
+        RowBox[{"\[VerticalSeparator]", 
+         TagBox[
+          SubscriptBox["1", 
+           OverscriptBox["j", "^"]],
+          Quantum`Notation`zz080KetArgs,
+          Editable->True,
+          Selectable->True], "\[RightAngleBracket]"}],
+        Quantum`Notation`zz080Ket,
+        Editable->False,
+        Selectable->False], "\[CenterDot]", 
+       TagBox[
+        RowBox[{"\[LeftAngleBracket]", 
+         TagBox[
+          SubscriptBox["1", 
+           OverscriptBox["j", "^"]],
+          Quantum`Notation`zz080BraArgs,
+          Editable->True,
+          Selectable->True], "\[VerticalSeparator]"}],
+        Quantum`Notation`zz080Bra,
+        Editable->False,
+        Selectable->False]}]}], ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Alpha]A", "=", 
+   RowBox[{
+    RowBox[{"-", "51"}], " ", "Degree"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Beta]A", "=", 
+   RowBox[{"16", " ", "Degree"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Gamma]A", "=", 
+    RowBox[{"0", " ", "Degree"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Alpha]B", "=", 
+   RowBox[{"0", " ", "Degree"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Beta]B", "=", 
+   RowBox[{"88", " ", "Degree"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Gamma]B", "=", 
+    RowBox[{
+     RowBox[{"-", "16"}], " ", "Degree"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"aA", "=", 
+   RowBox[{"N", "[", 
+    RowBox[{
+     RowBox[{"Exp", "[", 
+      RowBox[{"I", "*", "\[Alpha]A"}], "]"}], "*", 
+     RowBox[{"Cos", "[", "\[Beta]A", "]"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"bA", "=", 
+   RowBox[{"N", "[", 
+    RowBox[{
+     RowBox[{"-", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], "*", "\[Gamma]A"}], "]"}]}], "*", 
+     RowBox[{"Sin", "[", "\[Beta]A", "]"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"cA", "=", 
+   RowBox[{"N", "[", 
+    RowBox[{
+     RowBox[{"Exp", "[", 
+      RowBox[{"I", "*", "\[Gamma]A"}], "]"}], "*", 
+     RowBox[{"Sin", "[", "\[Beta]A", "]"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dA", "=", 
+    RowBox[{"N", "[", 
+     RowBox[{
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], "*", "\[Alpha]A"}], "]"}], "*", 
+      RowBox[{"Cos", "[", "\[Beta]A", "]"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"aB", "=", 
+   RowBox[{"N", "[", 
+    RowBox[{
+     RowBox[{"Exp", "[", 
+      RowBox[{"I", "*", "\[Alpha]B"}], "]"}], "*", 
+     RowBox[{"Cos", "[", "\[Beta]B", "]"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"bB", "=", 
+   RowBox[{"N", "[", 
+    RowBox[{
+     RowBox[{"-", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], "*", "\[Gamma]B"}], "]"}]}], "*", 
+     RowBox[{"Sin", "[", "\[Beta]B", "]"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"cB", "=", 
+   RowBox[{"N", "[", 
+    RowBox[{
+     RowBox[{"Exp", "[", 
+      RowBox[{"I", "*", "\[Gamma]B"}], "]"}], "*", 
+     RowBox[{"Sin", "[", "\[Beta]B", "]"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dB", "=", 
+   RowBox[{"N", "[", 
+    RowBox[{
+     RowBox[{"Exp", "[", 
+      RowBox[{
+       RowBox[{"-", "I"}], "*", "\[Alpha]B"}], "]"}], "*", 
+     RowBox[{"Cos", "[", "\[Beta]B", "]"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"CoinA", "[", "j_", "]"}], ":=", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"aA", 
+      RowBox[{
+       TagBox[
+        RowBox[{"\[VerticalSeparator]", 
+         TagBox[
+          SubscriptBox["0", 
+           OverscriptBox["j", "^"]],
+          Quantum`Notation`zz080KetArgs,
+          Editable->True,
+          Selectable->True], "\[RightAngleBracket]"}],
+        Quantum`Notation`zz080Ket,
+        Editable->False,
+        Selectable->False], "\[CenterDot]", 
+       TagBox[
+        RowBox[{"\[LeftAngleBracket]", 
+         TagBox[
+          SubscriptBox["0", 
+           OverscriptBox["j", "^"]],
+          Quantum`Notation`zz080BraArgs,
+          Editable->True,
+          Selectable->True], "\[VerticalSeparator]"}],
+        Quantum`Notation`zz080Bra,
+        Editable->False,
+        Selectable->False]}]}], "+", 
+     RowBox[{"bA", 
+      RowBox[{
+       TagBox[
+        RowBox[{"\[VerticalSeparator]", 
+         TagBox[
+          SubscriptBox["0", 
+           OverscriptBox["j", "^"]],
+          Quantum`Notation`zz080KetArgs,
+          Editable->True,
+          Selectable->True], "\[RightAngleBracket]"}],
+        Quantum`Notation`zz080Ket,
+        Editable->False,
+        Selectable->False], "\[CenterDot]", 
+       TagBox[
+        RowBox[{"\[LeftAngleBracket]", 
+         TagBox[
+          SubscriptBox["1", 
+           OverscriptBox["j", "^"]],
+          Quantum`Notation`zz080BraArgs,
+          Editable->True,
+          Selectable->True], "\[VerticalSeparator]"}],
+        Quantum`Notation`zz080Bra,
+        Editable->False,
+        Selectable->False]}]}], "+", 
+     RowBox[{"cA", 
+      RowBox[{
+       TagBox[
+        RowBox[{"\[VerticalSeparator]", 
+         TagBox[
+          SubscriptBox["1", 
+           OverscriptBox["j", "^"]],
+          Quantum`Notation`zz080KetArgs,
+          Editable->True,
+          Selectable->True], "\[RightAngleBracket]"}],
+        Quantum`Notation`zz080Ket,
+        Editable->False,
+        Selectable->False], "\[CenterDot]", 
+       TagBox[
+        RowBox[{"\[LeftAngleBracket]", 
+         TagBox[
+          SubscriptBox["0", 
+           OverscriptBox["j", "^"]],
+          Quantum`Notation`zz080BraArgs,
+          Editable->True,
+          Selectable->True], "\[VerticalSeparator]"}],
+        Quantum`Notation`zz080Bra,
+        Editable->False,
+        Selectable->False]}]}], "+", 
+     RowBox[{"dA", 
+      RowBox[{
+       TagBox[
+        RowBox[{"\[VerticalSeparator]", 
+         TagBox[
+          SubscriptBox["1", 
+           OverscriptBox["j", "^"]],
+          Quantum`Notation`zz080KetArgs,
+          Editable->True,
+          Selectable->True], "\[RightAngleBracket]"}],
+        Quantum`Notation`zz080Ket,
+        Editable->False,
+        Selectable->False], "\[CenterDot]", 
+       TagBox[
+        RowBox[{"\[LeftAngleBracket]", 
+         TagBox[
+          SubscriptBox["1", 
+           OverscriptBox["j", "^"]],
+          Quantum`Notation`zz080BraArgs,
+          Editable->True,
+          Selectable->True], "\[VerticalSeparator]"}],
+        Quantum`Notation`zz080Bra,
+        Editable->False,
+        Selectable->False]}]}]}], ")"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"CoinB", "[", "j_", "]"}], ":=", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"aB", 
+     RowBox[{
+      TagBox[
+       RowBox[{"\[VerticalSeparator]", 
+        TagBox[
+         SubscriptBox["0", 
+          OverscriptBox["j", "^"]],
+         Quantum`Notation`zz080KetArgs,
+         Editable->True,
+         Selectable->True], "\[RightAngleBracket]"}],
+       Quantum`Notation`zz080Ket,
+       Editable->False,
+       Selectable->False], "\[CenterDot]", 
+      TagBox[
+       RowBox[{"\[LeftAngleBracket]", 
+        TagBox[
+         SubscriptBox["0", 
+          OverscriptBox["j", "^"]],
+         Quantum`Notation`zz080BraArgs,
+         Editable->True,
+         Selectable->True], "\[VerticalSeparator]"}],
+       Quantum`Notation`zz080Bra,
+       Editable->False,
+       Selectable->False]}]}], "+", 
+    RowBox[{"bB", 
+     RowBox[{
+      TagBox[
+       RowBox[{"\[VerticalSeparator]", 
+        TagBox[
+         SubscriptBox["0", 
+          OverscriptBox["j", "^"]],
+         Quantum`Notation`zz080KetArgs,
+         Editable->True,
+         Selectable->True], "\[RightAngleBracket]"}],
+       Quantum`Notation`zz080Ket,
+       Editable->False,
+       Selectable->False], "\[CenterDot]", 
+      TagBox[
+       RowBox[{"\[LeftAngleBracket]", 
+        TagBox[
+         SubscriptBox["1", 
+          OverscriptBox["j", "^"]],
+         Quantum`Notation`zz080BraArgs,
+         Editable->True,
+         Selectable->True], "\[VerticalSeparator]"}],
+       Quantum`Notation`zz080Bra,
+       Editable->False,
+       Selectable->False]}]}], "+", 
+    RowBox[{"cB", 
+     RowBox[{
+      TagBox[
+       RowBox[{"\[VerticalSeparator]", 
+        TagBox[
+         SubscriptBox["1", 
+          OverscriptBox["j", "^"]],
+         Quantum`Notation`zz080KetArgs,
+         Editable->True,
+         Selectable->True], "\[RightAngleBracket]"}],
+       Quantum`Notation`zz080Ket,
+       Editable->False,
+       Selectable->False], "\[CenterDot]", 
+      TagBox[
+       RowBox[{"\[LeftAngleBracket]", 
+        TagBox[
+         SubscriptBox["0", 
+          OverscriptBox["j", "^"]],
+         Quantum`Notation`zz080BraArgs,
+         Editable->True,
+         Selectable->True], "\[VerticalSeparator]"}],
+       Quantum`Notation`zz080Bra,
+       Editable->False,
+       Selectable->False]}]}], "+", 
+    RowBox[{"dB", 
+     RowBox[{
+      TagBox[
+       RowBox[{"\[VerticalSeparator]", 
+        TagBox[
+         SubscriptBox["1", 
+          OverscriptBox["j", "^"]],
+         Quantum`Notation`zz080KetArgs,
+         Editable->True,
+         Selectable->True], "\[RightAngleBracket]"}],
+       Quantum`Notation`zz080Ket,
+       Editable->False,
+       Selectable->False], "\[CenterDot]", 
+      TagBox[
+       RowBox[{"\[LeftAngleBracket]", 
+        TagBox[
+         SubscriptBox["1", 
+          OverscriptBox["j", "^"]],
+         Quantum`Notation`zz080BraArgs,
+         Editable->True,
+         Selectable->True], "\[VerticalSeparator]"}],
+       Quantum`Notation`zz080Bra,
+       Editable->False,
+       Selectable->False]}]}]}], ")"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"CHEC1", "=", 
+   RowBox[{"Expand", "[", " ", 
+    RowBox[{
+     RowBox[{"CoinA", "[", "1", "]"}], "\[CircleTimes]", 
+     RowBox[{"CoinB", "[", "2", "]"}]}], " ", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"CHEC2", "=", 
+   RowBox[{"Expand", "[", " ", 
+    RowBox[{
+     RowBox[{"CoinB", "[", "1", "]"}], "\[CircleTimes]", 
+     RowBox[{"CoinA", "[", "2", "]"}]}], " ", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"steps", "=", "600"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"gamma", "=", 
+   RowBox[{"Pi", "/", "4"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   TagBox[
+    RowBox[{"\[VerticalSeparator]", 
+     TagBox[
+      RowBox[{"weff", "[", "0", "]"}],
+      Quantum`Notation`zz080KetArgs,
+      Editable->True,
+      Selectable->True], "\[RightAngleBracket]"}],
+    Quantum`Notation`zz080Ket,
+    Editable->False,
+    Selectable->False], "=", 
+   RowBox[{
+    TagBox[
+     RowBox[{"\[VerticalSeparator]", 
+      TagBox[
+       SubscriptBox["0", 
+        OverscriptBox["pp", "^"]],
+       Quantum`Notation`zz080KetArgs,
+       Editable->True,
+       Selectable->True], "\[RightAngleBracket]"}],
+     Quantum`Notation`zz080Ket,
+     Editable->False,
+     Selectable->False], "\[CircleTimes]", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Cos", "[", 
+        RowBox[{"gamma", "/", "2"}], "]"}], 
+       TagBox[
+        RowBox[{"\[VerticalSeparator]", 
+         TagBox[
+          RowBox[{
+           SubscriptBox["1", 
+            OverscriptBox["1", "^"]], ",", 
+           SubscriptBox["0", 
+            OverscriptBox["2", "^"]]}],
+          Quantum`Notation`zz080KetArgs,
+          Editable->True,
+          Selectable->True], "\[RightAngleBracket]"}],
+        Quantum`Notation`zz080Ket,
+        Editable->False,
+        Selectable->False]}], "+", 
+      RowBox[{"I", " ", 
+       RowBox[{"Sin", "[", 
+        RowBox[{"gamma", "/", "2"}], "]"}], 
+       TagBox[
+        RowBox[{"\[VerticalSeparator]", 
+         TagBox[
+          RowBox[{
+           SubscriptBox["0", 
+            OverscriptBox["1", "^"]], ",", 
+           SubscriptBox["1", 
+            OverscriptBox["2", "^"]]}],
+          Quantum`Notation`zz080KetArgs,
+          Editable->True,
+          Selectable->True], "\[RightAngleBracket]"}],
+        Quantum`Notation`zz080Ket,
+        Editable->False,
+        Selectable->False]}]}], ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Do", "[", 
+   RowBox[{
+    RowBox[{"If", " ", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Mod", "[", 
+        RowBox[{"k", ",", "2"}], "]"}], "\[Equal]", "0"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       TagBox[
+        RowBox[{"\[VerticalSeparator]", 
+         TagBox[
+          RowBox[{"weff", "[", "k", "]"}],
+          Quantum`Notation`zz080KetArgs,
+          Editable->True,
+          Selectable->True], "\[RightAngleBracket]"}],
+        Quantum`Notation`zz080Ket,
+        Editable->False,
+        Selectable->False], "=", 
+       RowBox[{"Expand", "[", 
+        RowBox[{"ReplaceAll", "[", 
+         RowBox[{
+          RowBox[{"CHEC1", "\[CenterDot]", 
+           TagBox[
+            RowBox[{"\[VerticalSeparator]", 
+             TagBox[
+              RowBox[{"weff", "[", 
+               RowBox[{"k", "-", "1"}], "]"}],
+              Quantum`Notation`zz080KetArgs,
+              Editable->True,
+              Selectable->True], "\[RightAngleBracket]"}],
+            Quantum`Notation`zz080Ket,
+            Editable->False,
+            Selectable->False]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             TagBox[
+              RowBox[{"\[VerticalSeparator]", 
+               TagBox[
+                RowBox[{
+                 SubscriptBox["0", 
+                  OverscriptBox["1", "^"]], ",", 
+                 SubscriptBox["0", 
+                  OverscriptBox["2", "^"]], ",", 
+                 SubscriptBox["j_", 
+                  OverscriptBox["pp", "^"]]}],
+                Quantum`Notation`zz080KetArgs,
+                Editable->True,
+                Selectable->True], "\[RightAngleBracket]"}],
+              Quantum`Notation`zz080Ket,
+              Editable->False,
+              Selectable->False], "\[RuleDelayed]", 
+             TagBox[
+              RowBox[{"\[VerticalSeparator]", 
+               TagBox[
+                RowBox[{
+                 SubscriptBox["0", 
+                  OverscriptBox["1", "^"]], ",", 
+                 SubscriptBox["0", 
+                  OverscriptBox["2", "^"]], ",", 
+                 SubscriptBox[
+                  RowBox[{"(", 
+                   RowBox[{"j", "+", "1"}], ")"}], 
+                  OverscriptBox["pp", "^"]]}],
+                Quantum`Notation`zz080KetArgs,
+                Editable->True,
+                Selectable->True], "\[RightAngleBracket]"}],
+              Quantum`Notation`zz080Ket,
+              Editable->False,
+              Selectable->False]}], ",", "\[IndentingNewLine]", 
+            RowBox[{
+             TagBox[
+              RowBox[{"\[VerticalSeparator]", 
+               TagBox[
+                RowBox[{
+                 SubscriptBox["0", 
+                  OverscriptBox["1", "^"]], ",", 
+                 SubscriptBox["1", 
+                  OverscriptBox["2", "^"]], ",", 
+                 SubscriptBox["j_", 
+                  OverscriptBox["pp", "^"]]}],
+                Quantum`Notation`zz080KetArgs,
+                Editable->True,
+                Selectable->True], "\[RightAngleBracket]"}],
+              Quantum`Notation`zz080Ket,
+              Editable->False,
+              Selectable->False], "\[RuleDelayed]", 
+             TagBox[
+              RowBox[{"\[VerticalSeparator]", 
+               TagBox[
+                RowBox[{
+                 SubscriptBox["0", 
+                  OverscriptBox["1", "^"]], ",", 
+                 SubscriptBox["1", 
+                  OverscriptBox["2", "^"]], ",", 
+                 SubscriptBox[
+                  RowBox[{"(", 
+                   RowBox[{"j", "+", "0"}], ")"}], 
+                  OverscriptBox["pp", "^"]]}],
+                Quantum`Notation`zz080KetArgs,
+                Editable->True,
+                Selectable->True], "\[RightAngleBracket]"}],
+              Quantum`Notation`zz080Ket,
+              Editable->False,
+              Selectable->False]}], ",", "\[IndentingNewLine]", 
+            RowBox[{
+             TagBox[
+              RowBox[{"\[VerticalSeparator]", 
+               TagBox[
+                RowBox[{
+                 SubscriptBox["1", 
+                  OverscriptBox["1", "^"]], ",", 
+                 SubscriptBox["0", 
+                  OverscriptBox["2", "^"]], ",", 
+                 SubscriptBox["j_", 
+                  OverscriptBox["pp", "^"]]}],
+                Quantum`Notation`zz080KetArgs,
+                Editable->True,
+                Selectable->True], "\[RightAngleBracket]"}],
+              Quantum`Notation`zz080Ket,
+              Editable->False,
+              Selectable->False], "\[RuleDelayed]", 
+             TagBox[
+              RowBox[{"\[VerticalSeparator]", 
+               TagBox[
+                RowBox[{
+                 SubscriptBox["1", 
+                  OverscriptBox["1", "^"]], ",", 
+                 SubscriptBox["0", 
+                  OverscriptBox["2", "^"]], ",", 
+                 SubscriptBox[
+                  RowBox[{"(", 
+                   RowBox[{"j", "-", "0"}], ")"}], 
+                  OverscriptBox["pp", "^"]]}],
+                Quantum`Notation`zz080KetArgs,
+                Editable->True,
+                Selectable->True], "\[RightAngleBracket]"}],
+              Quantum`Notation`zz080Ket,
+              Editable->False,
+              Selectable->False]}], ",", "\[IndentingNewLine]", 
+            RowBox[{
+             TagBox[
+              RowBox[{"\[VerticalSeparator]", 
+               TagBox[
+                RowBox[{
+                 SubscriptBox["1", 
+                  OverscriptBox["1", "^"]], ",", 
+                 SubscriptBox["1", 
+                  OverscriptBox["2", "^"]], ",", 
+                 SubscriptBox["j_", 
+                  OverscriptBox["pp", "^"]]}],
+                Quantum`Notation`zz080KetArgs,
+                Editable->True,
+                Selectable->True], "\[RightAngleBracket]"}],
+              Quantum`Notation`zz080Ket,
+              Editable->False,
+              Selectable->False], "\[RuleDelayed]", 
+             TagBox[
+              RowBox[{"\[VerticalSeparator]", 
+               TagBox[
+                RowBox[{
+                 SubscriptBox["1", 
+                  OverscriptBox["1", "^"]], ",", 
+                 SubscriptBox["1", 
+                  OverscriptBox["2", "^"]], ",", 
+                 SubscriptBox[
+                  RowBox[{"(", 
+                   RowBox[{"j", "-", "1"}], ")"}], 
+                  OverscriptBox["pp", "^"]]}],
+                Quantum`Notation`zz080KetArgs,
+                Editable->True,
+                Selectable->True], "\[RightAngleBracket]"}],
+              Quantum`Notation`zz080Ket,
+              Editable->False,
+              Selectable->False]}]}], "}"}]}], "]"}], "]"}]}], ",", 
+      "\[IndentingNewLine]", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{
+        TagBox[
+         RowBox[{"\[VerticalSeparator]", 
+          TagBox[
+           RowBox[{"weff", "[", "k", "]"}],
+           Quantum`Notation`zz080KetArgs,
+           Editable->True,
+           Selectable->True], "\[RightAngleBracket]"}],
+         Quantum`Notation`zz080Ket,
+         Editable->False,
+         Selectable->False], "=", 
+        RowBox[{"Expand", "[", 
+         RowBox[{"ReplaceAll", "[", 
+          RowBox[{
+           RowBox[{"CHEC2", "\[CenterDot]", 
+            TagBox[
+             RowBox[{"\[VerticalSeparator]", 
+              TagBox[
+               RowBox[{"weff", "[", 
+                RowBox[{"k", "-", "1"}], "]"}],
+               Quantum`Notation`zz080KetArgs,
+               Editable->True,
+               Selectable->True], "\[RightAngleBracket]"}],
+             Quantum`Notation`zz080Ket,
+             Editable->False,
+             Selectable->False]}], ",", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{
+              TagBox[
+               RowBox[{"\[VerticalSeparator]", 
+                TagBox[
+                 RowBox[{
+                  SubscriptBox["0", 
+                   OverscriptBox["1", "^"]], ",", 
+                  SubscriptBox["0", 
+                   OverscriptBox["2", "^"]], ",", 
+                  SubscriptBox["j_", 
+                   OverscriptBox["pp", "^"]]}],
+                 Quantum`Notation`zz080KetArgs,
+                 Editable->True,
+                 Selectable->True], "\[RightAngleBracket]"}],
+               Quantum`Notation`zz080Ket,
+               Editable->False,
+               Selectable->False], "\[RuleDelayed]", 
+              TagBox[
+               RowBox[{"\[VerticalSeparator]", 
+                TagBox[
+                 RowBox[{
+                  SubscriptBox["0", 
+                   OverscriptBox["1", "^"]], ",", 
+                  SubscriptBox["0", 
+                   OverscriptBox["2", "^"]], ",", 
+                  SubscriptBox[
+                   RowBox[{"(", 
+                    RowBox[{"j", "+", "1"}], ")"}], 
+                   OverscriptBox["pp", "^"]]}],
+                 Quantum`Notation`zz080KetArgs,
+                 Editable->True,
+                 Selectable->True], "\[RightAngleBracket]"}],
+               Quantum`Notation`zz080Ket,
+               Editable->False,
+               Selectable->False]}], ",", "\[IndentingNewLine]", 
+             RowBox[{
+              TagBox[
+               RowBox[{"\[VerticalSeparator]", 
+                TagBox[
+                 RowBox[{
+                  SubscriptBox["0", 
+                   OverscriptBox["1", "^"]], ",", 
+                  SubscriptBox["1", 
+                   OverscriptBox["2", "^"]], ",", 
+                  SubscriptBox["j_", 
+                   OverscriptBox["pp", "^"]]}],
+                 Quantum`Notation`zz080KetArgs,
+                 Editable->True,
+                 Selectable->True], "\[RightAngleBracket]"}],
+               Quantum`Notation`zz080Ket,
+               Editable->False,
+               Selectable->False], "\[RuleDelayed]", 
+              TagBox[
+               RowBox[{"\[VerticalSeparator]", 
+                TagBox[
+                 RowBox[{
+                  SubscriptBox["0", 
+                   OverscriptBox["1", "^"]], ",", 
+                  SubscriptBox["1", 
+                   OverscriptBox["2", "^"]], ",", 
+                  SubscriptBox[
+                   RowBox[{"(", 
+                    RowBox[{"j", "+", "0"}], ")"}], 
+                   OverscriptBox["pp", "^"]]}],
+                 Quantum`Notation`zz080KetArgs,
+                 Editable->True,
+                 Selectable->True], "\[RightAngleBracket]"}],
+               Quantum`Notation`zz080Ket,
+               Editable->False,
+               Selectable->False]}], ",", "\[IndentingNewLine]", 
+             RowBox[{
+              TagBox[
+               RowBox[{"\[VerticalSeparator]", 
+                TagBox[
+                 RowBox[{
+                  SubscriptBox["1", 
+                   OverscriptBox["1", "^"]], ",", 
+                  SubscriptBox["0", 
+                   OverscriptBox["2", "^"]], ",", 
+                  SubscriptBox["j_", 
+                   OverscriptBox["pp", "^"]]}],
+                 Quantum`Notation`zz080KetArgs,
+                 Editable->True,
+                 Selectable->True], "\[RightAngleBracket]"}],
+               Quantum`Notation`zz080Ket,
+               Editable->False,
+               Selectable->False], "\[RuleDelayed]", 
+              TagBox[
+               RowBox[{"\[VerticalSeparator]", 
+                TagBox[
+                 RowBox[{
+                  SubscriptBox["1", 
+                   OverscriptBox["1", "^"]], ",", 
+                  SubscriptBox["0", 
+                   OverscriptBox["2", "^"]], ",", 
+                  SubscriptBox[
+                   RowBox[{"(", 
+                    RowBox[{"j", "-", "0"}], ")"}], 
+                   OverscriptBox["pp", "^"]]}],
+                 Quantum`Notation`zz080KetArgs,
+                 Editable->True,
+                 Selectable->True], "\[RightAngleBracket]"}],
+               Quantum`Notation`zz080Ket,
+               Editable->False,
+               Selectable->False]}], ",", "\[IndentingNewLine]", 
+             RowBox[{
+              TagBox[
+               RowBox[{"\[VerticalSeparator]", 
+                TagBox[
+                 RowBox[{
+                  SubscriptBox["1", 
+                   OverscriptBox["1", "^"]], ",", 
+                  SubscriptBox["1", 
+                   OverscriptBox["2", "^"]], ",", 
+                  SubscriptBox["j_", 
+                   OverscriptBox["pp", "^"]]}],
+                 Quantum`Notation`zz080KetArgs,
+                 Editable->True,
+                 Selectable->True], "\[RightAngleBracket]"}],
+               Quantum`Notation`zz080Ket,
+               Editable->False,
+               Selectable->False], "\[RuleDelayed]", 
+              TagBox[
+               RowBox[{"\[VerticalSeparator]", 
+                TagBox[
+                 RowBox[{
+                  SubscriptBox["1", 
+                   OverscriptBox["1", "^"]], ",", 
+                  SubscriptBox["1", 
+                   OverscriptBox["2", "^"]], ",", 
+                  SubscriptBox[
+                   RowBox[{"(", 
+                    RowBox[{"j", "-", "1"}], ")"}], 
+                   OverscriptBox["pp", "^"]]}],
+                 Quantum`Notation`zz080KetArgs,
+                 Editable->True,
+                 Selectable->True], "\[RightAngleBracket]"}],
+               Quantum`Notation`zz080Ket,
+               Editable->False,
+               Selectable->False]}]}], "}"}]}], "]"}], "]"}]}], ";"}]}], 
+     "]"}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"k", ",", "1", ",", "steps", ",", "1"}], "}"}]}], 
+   "\[IndentingNewLine]", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"X", "=", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Do", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"pl", "=", "0"}], ";", 
+     RowBox[{"pr", "=", "0"}], ";", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Do", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"ketList", "=", 
+          RowBox[{"Cases", "[", 
+           RowBox[{
+            TagBox[
+             RowBox[{"\[VerticalSeparator]", 
+              TagBox[
+               RowBox[{"weff", "[", "s", "]"}],
+               Quantum`Notation`zz080KetArgs,
+               Editable->True,
+               Selectable->True], "\[RightAngleBracket]"}],
+             Quantum`Notation`zz080Ket,
+             Editable->False,
+             Selectable->False], ",", 
+            RowBox[{"x_.", "*", 
+             TagBox[
+              RowBox[{"\[VerticalSeparator]", 
+               TagBox[
+                RowBox[{
+                 SubscriptBox["y_", 
+                  OverscriptBox["1", "^"]], ",", 
+                 SubscriptBox["z_", 
+                  OverscriptBox["2", "^"]], ",", 
+                 SubscriptBox["j", 
+                  OverscriptBox["pp", "^"]]}],
+                Quantum`Notation`zz080KetArgs,
+                Editable->True,
+                Selectable->True], "\[RightAngleBracket]"}],
+              Quantum`Notation`zz080Ket,
+              Editable->False,
+              Selectable->False]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+         RowBox[{"braList", "=", 
+          RowBox[{"Map", "[", 
+           RowBox[{
+            RowBox[{"Function", "[", 
+             RowBox[{
+              RowBox[{"{", "w", "}"}], ",", 
+              SuperscriptBox[
+               RowBox[{"(", "w", ")"}], "\[Dagger]"]}], "]"}], ",", 
+            "ketList"}], "]"}]}], ";", "\[IndentingNewLine]", 
+         RowBox[{"productList", "=", "\[IndentingNewLine]", 
+          RowBox[{"MapThread", "[", 
+           RowBox[{
+            RowBox[{"Function", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"b", ",", "k"}], "}"}], ",", 
+              RowBox[{"b", "\[CenterDot]", "k"}]}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"braList", ",", "ketList"}], "}"}]}], "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{"j", "<", "0"}], " ", ",", 
+           RowBox[{"pl", "=", 
+            RowBox[{"pl", "+", 
+             RowBox[{"s", "*", 
+              RowBox[{"Apply", "[", 
+               RowBox[{"Plus", ",", "productList"}], "]"}]}]}]}], ",", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"##", "&"}], "[", "]"}], ";"}]}], "]"}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{"j", ">", "0"}], " ", ",", 
+           RowBox[{"pr", "=", 
+            RowBox[{"pr", "+", 
+             RowBox[{"s", "*", 
+              RowBox[{"Apply", "[", 
+               RowBox[{"Plus", ",", "productList"}], "]"}]}]}]}], ",", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"##", "&"}], "[", "]"}], ";"}]}], "]"}], ";"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"j", ",", 
+          RowBox[{"-", "s"}], ",", "s"}], "}"}]}], "]"}], 
+      "\[IndentingNewLine]", 
+      RowBox[{"AppendTo", "[", 
+       RowBox[{"X", ",", 
+        RowBox[{"{", 
+         RowBox[{"s", ",", 
+          RowBox[{"pr", "-", "pl"}]}], "}"}]}], "]"}]}], ";"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"s", ",", "0", ",", "steps"}], "}"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ListPlot", "[", 
+  RowBox[{"X", ",", 
+   RowBox[{"Joined", "\[Rule]", "True"}], ",", 
+   RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
+   RowBox[{"Frame", "\[Rule]", "True"}], ",", 
+   RowBox[{"Axes", "\[Rule]", "False"}]}], 
+  "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.691346172176798*^9, 3.691346182581839*^9}, {
+   3.6913463450818467`*^9, 3.6913463467522507`*^9}, {3.691346442801656*^9, 
+   3.691346546477063*^9}, {3.69134665410843*^9, 3.691346670046733*^9}, {
+   3.6913469322696457`*^9, 3.69134701273201*^9}, {3.691347120878304*^9, 
+   3.6913471763943434`*^9}, {3.6913472254017954`*^9, 3.691347252282122*^9}, {
+   3.691348815476979*^9, 3.6913488535885143`*^9}, {3.691349024306065*^9, 
+   3.691349093986369*^9}, {3.6913492115169263`*^9, 3.6913492317176185`*^9}, {
+   3.6913492680768433`*^9, 3.6913492685614285`*^9}, {3.6913494871408043`*^9, 
+   3.691349487756125*^9}, {3.691350349128893*^9, 3.691350349776306*^9}, {
+   3.69135047760189*^9, 3.691350510463451*^9}, {3.691350622055667*^9, 
+   3.6913506391108446`*^9}, {3.691350698332234*^9, 3.6913508296531997`*^9}, {
+   3.6913508777932625`*^9, 3.691350896432731*^9}, 3.691351011504021*^9, {
+   3.6913510858022223`*^9, 3.6913510916402993`*^9}, {3.691351142612591*^9, 
+   3.691351207146637*^9}, {3.69135142949897*^9, 3.6913514368853755`*^9}, {
+   3.6913516278159246`*^9, 3.691351733896946*^9}, {3.6913517917489367`*^9, 
+   3.6913518210979004`*^9}, 3.6913518687536745`*^9, {3.6913521137078524`*^9, 
+   3.6913521142048445`*^9}, {3.691352314874175*^9, 3.6913523156590366`*^9}, {
+   3.691352447281155*^9, 3.6913524936116915`*^9}, {3.6913525681426888`*^9, 
+   3.6913526158885627`*^9}, {3.691352658184572*^9, 3.691352669771078*^9}, {
+   3.6913527249775496`*^9, 3.691352797362647*^9}, {3.691352828793481*^9, 
+   3.6913528741513023`*^9}, {3.6913530895435667`*^9, 
+   3.6913530909452324`*^9}, {3.6913543587565556`*^9, 3.691354386949795*^9}, {
+   3.691388493034978*^9, 3.69138849340031*^9}, {3.692421630001081*^9, 
+   3.6924216784226627`*^9}, {3.692421721622466*^9, 3.6924218000064163`*^9}, {
+   3.692421970022513*^9, 3.692422016984375*^9}, {3.692422126039665*^9, 
+   3.69242218796187*^9}, 3.6924223627392673`*^9, {3.692422478796484*^9, 
+   3.6924224913921127`*^9}, {3.692422543657196*^9, 3.6924225642006407`*^9}, {
+   3.692422634840455*^9, 3.692422637078733*^9}, {3.6924229132131453`*^9, 
+   3.692422913637226*^9}, {3.692423497214492*^9, 3.6924235565676517`*^9}, {
+   3.692423593710487*^9, 3.692423647230022*^9}, {3.692424022786532*^9, 
+   3.692424046752262*^9}, {3.6924242317379427`*^9, 3.692424232502738*^9}, {
+   3.692424485820891*^9, 3.692424486316217*^9}, {3.692425066469206*^9, 
+   3.692425067767497*^9}, {3.692425798921095*^9, 3.692425808230699*^9}, {
+   3.692586617000216*^9, 3.692586683072095*^9}, {3.692586866815021*^9, 
+   3.6925868854610777`*^9}, {3.692586918260674*^9, 3.692586928345393*^9}, {
+   3.692588345975499*^9, 3.692588350185267*^9}, {3.6925895859911203`*^9, 
+   3.69258962999798*^9}, {3.6951642700150433`*^9, 3.695164270514546*^9}, 
+   3.695164321759063*^9, {3.695177511815257*^9, 3.695177513015863*^9}, {
+   3.695189202713704*^9, 3.6951892031996202`*^9}, {3.695200697182015*^9, 
+   3.695200718887588*^9}, {3.695217334614118*^9, 3.695217347944091*^9}, {
+   3.695243778916953*^9, 3.695243780408429*^9}, {3.695256457181573*^9, 
+   3.695256464389978*^9}, {3.695256498411914*^9, 3.695256500023093*^9}, {
+   3.695269583591859*^9, 3.69526958948444*^9}, {3.6952826182381907`*^9, 
+   3.695282621742106*^9}, {3.6952958126730947`*^9, 3.695295814269308*^9}, {
+   3.695328721213163*^9, 3.695328723451866*^9}, {3.6961206223307858`*^9, 
+   3.696120650957994*^9}, {3.696121240881235*^9, 3.696121258823823*^9}, {
+   3.696121830897127*^9, 3.696121862004331*^9}, {3.6961221952977133`*^9, 
+   3.696122206105372*^9}, {3.696122304809684*^9, 3.696122333415069*^9}, {
+   3.696122394805476*^9, 3.6961223984158154`*^9}, {3.696122445332782*^9, 
+   3.6961225021926003`*^9}, {3.696123068029819*^9, 3.696123068600183*^9}, {
+   3.696131599572686*^9, 3.696131605033846*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{}, {}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+     0.0055000000000000005`], AbsoluteThickness[1.6], LineBox[CompressedData["
+
+1:eJxtmHlczdvXx48GMlXX7RLCQaYUyZSKPjKUJKdRg3IaJQ3nNJyG0/A9Rzeu
+W0nmCkemzBU3ictBhmu6IUkZjkTd8Og2KN1unp7Xb+3fX09/6PW299prr7U+
+e+39bbx/pHOQGo/H8+z75/9+//8/LdYzXsy7JHnbYE3/gUGFQYei6tqJtTD4
+RZa4aN9bYl3oDdzZvCG1kVgPYV1bzZrruon18e3mj8tFY3j4DxvgobX8w4ue
+ocR8ND0fvbBmxA/EE5Cwbrf0Rzwne0PY5KhFf+t6QTwZd6a7nl/ZMYbmT8Wx
+wRa3v5vziY1gfk0ouLbhM803hunMiLDc91+IZ+Dd2OlBv60woPmm6CiYb/1g
+yFjiWVibGTvef+lIYjMMqn7wRnRpFPFsNCwM3fQsT5N4Dj4/9Dr0tqk/8Vz0
+y1X+U1cwjXgeLDqWd3tuNiKej53yh56bOppoP+aI2KlTNdK/mXgBMvLV1/3P
+dzbfAu3nPbx5v08ntkT945HP/b+NILZC8azHCnE/tt+FsLq4cd2uTpafRUgc
+eOls98hxxNZYW5tv1RVgQgy0vkh7E9ZOzAERc9w/TLmmRuOL8TzxksegAnUa
+X4zRl5w+/jrbjMZtMDTE89UnF2LOBplVAf+I++nR+BIUSq7fWfaCmFsCqz/T
+pI4eLL6leGTEm2/wgphbCvPqOUaNP7B4l8G1bejDkkxibhkudtZ8igeLdzmG
+GV5ZZGRN9eGW4/QH21S+92wat4VhZOA1ExtizhYv3/ydc03I8meHjEXKvSuc
+9GncDtrtIU1Sw1k0vgIHnsV37ptMzK3A0OGNqZMuTqFxe+j5ldckOk6lcXss
+PhU2MSd3Mo2vhLaPd8RJS5rPrcTDrOTlnulsfQe0fLwl7Qxi6zsgw6X06Mrm
+CTS+CrO6LqZY7ptI46vgOGF3u+5hZu+IprRfNEy8mL0jnvS+CdJSZ/pbjauO
+Hwrv3ibmViPha5Pa4iRWfwGKLy1dUVFDDAH0Xf7Rv9U8g+YL4ODU8sygi1gp
+APe96PaobmOyd0KW23GPSa+YvRMKN3MH/MKZvRMuSK751CloXOmEfV2rZYfz
+TcneGT9Natc0HUn7hzNSsiPMFkqZHp1ROCXt0hhnZu+MD+pRZZPsmL0LZrTX
+bWrcRAwXrJVslZ+ezvTogryq3rbxO4iVLlgekLfloS/LjyuETq7OhyqpfnBF
+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
+0A==
+      "]]}}, {}, {}, {{}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{False, False},
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0},
+  DisplayFunction->Identity,
+  Frame->{{True, True}, {True, True}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImagePadding->All,
+  Method->{"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{0, 600.}, {0, 137.18573588299853`}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.02], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{3.696122339560155*^9, 3.696122405819695*^9, 
+  3.6961224824670897`*^9, 3.696123030341052*^9, 3.6961296326423264`*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.6961299446203337`*^9, 3.696130002805983*^9}, 
+   3.696130653445796*^9}]
+},
+WindowSize->{1014, 983},
+WindowMargins->{{171, Automatic}, {Automatic, 28}},
+InputAliases->{
+ "on" -> "\[CenterDot]", "tp" -> "\[CircleTimes]", "op" -> 
+  OverscriptBox["\[Placeholder]", "^"], "her" -> SuperscriptBox[
+    RowBox[{"(", "\[Placeholder]", ")"}], "\[Dagger]"], "con" -> 
+  SuperscriptBox[
+    RowBox[{"(", "\[Placeholder]", ")"}], "*"], "comm" -> TagBox[
+    SubscriptBox[
+     RowBox[{"\[LeftDoubleBracket]", 
+       TagBox[
+        RowBox[{"\[Placeholder]", ",", "\[Placeholder]"}], 
+        Quantum`Notation`zz080KetArgs, Editable -> True, Selectable -> True], 
+       "\[RightDoubleBracket]"}], "-"], Quantum`Notation`zz050Commutator, 
+    Editable -> False, Selectable -> False], "anti" -> TagBox[
+    SubscriptBox[
+     RowBox[{"\[LeftDoubleBracket]", 
+       TagBox[
+        RowBox[{"\[Placeholder]", ",", "\[Placeholder]"}], 
+        Quantum`Notation`zz080KetArgs, Editable -> True, Selectable -> True], 
+       "\[RightDoubleBracket]"}], "+"], Quantum`Notation`zz050AntiCommutator, 
+    Editable -> False, Selectable -> False], "ket" -> TagBox[
+    RowBox[{"\[VerticalSeparator]", 
+      TagBox[
+      "\[Placeholder]", Quantum`Notation`zz080KetArgs, Editable -> True, 
+       Selectable -> True, BaseStyle -> {ShowSyntaxStyles -> True}], 
+      "\[RightAngleBracket]"}], Quantum`Notation`zz080Ket, Editable -> False, 
+    Selectable -> False, BaseStyle -> {ShowSyntaxStyles -> False}], "ev" -> 
+  SubscriptBox["\[Placeholder]", 
+    OverscriptBox["\[Placeholder]", "^"]], "eval" -> 
+  SubscriptBox["\[Placeholder]", 
+    OverscriptBox["\[Placeholder]", "^"]], "eket" -> TagBox[
+    RowBox[{"\[VerticalSeparator]", 
+      TagBox[
+       RowBox[{
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]]}], 
+       Quantum`Notation`zz080KetArgs, Editable -> True, Selectable -> True, 
+       BaseStyle -> {ShowSyntaxStyles -> True}], "\[RightAngleBracket]"}], 
+    Quantum`Notation`zz080Ket, Editable -> False, Selectable -> False, 
+    BaseStyle -> {ShowSyntaxStyles -> False}], "eeket" -> TagBox[
+    RowBox[{"\[VerticalSeparator]", 
+      TagBox[
+       RowBox[{
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]], ",", 
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]]}], 
+       Quantum`Notation`zz080KetArgs, Editable -> True, Selectable -> True, 
+       BaseStyle -> {ShowSyntaxStyles -> True}], "\[RightAngleBracket]"}], 
+    Quantum`Notation`zz080Ket, Editable -> False, Selectable -> False, 
+    BaseStyle -> {ShowSyntaxStyles -> False}], "eeeket" -> TagBox[
+    RowBox[{"\[VerticalSeparator]", 
+      TagBox[
+       RowBox[{
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]], ",", 
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]], ",", 
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]]}], 
+       Quantum`Notation`zz080KetArgs, Editable -> True, Selectable -> True, 
+       BaseStyle -> {ShowSyntaxStyles -> True}], "\[RightAngleBracket]"}], 
+    Quantum`Notation`zz080Ket, Editable -> False, Selectable -> False, 
+    BaseStyle -> {ShowSyntaxStyles -> False}], "braket" -> TagBox[
+    RowBox[{"\[LeftAngleBracket]", 
+      TagBox[
+      "\[Placeholder]", Quantum`Notation`zz080BraArgs, Editable -> True, 
+       Selectable -> True, BaseStyle -> {ShowSyntaxStyles -> True}], 
+      "\[VerticalSeparator]", 
+      TagBox[
+      "\[Placeholder]", Quantum`Notation`zz080KetArgs, Editable -> True, 
+       Selectable -> True, BaseStyle -> {ShowSyntaxStyles -> True}], 
+      "\[RightAngleBracket]"}], Quantum`Notation`zz080BraKet, Editable -> 
+    False, Selectable -> False, BaseStyle -> {ShowSyntaxStyles -> False}], 
+  "ebraket" -> TagBox[
+    RowBox[{"\[LeftAngleBracket]", 
+      TagBox[
+       RowBox[{
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]]}], 
+       Quantum`Notation`zz080BraArgs, Editable -> True, Selectable -> True, 
+       BaseStyle -> {ShowSyntaxStyles -> True}], "\[VerticalSeparator]", 
+      TagBox[
+       RowBox[{
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]]}], 
+       Quantum`Notation`zz080KetArgs, Editable -> True, Selectable -> True, 
+       BaseStyle -> {ShowSyntaxStyles -> True}], "\[RightAngleBracket]"}], 
+    Quantum`Notation`zz080BraKet, Editable -> False, Selectable -> False, 
+    BaseStyle -> {ShowSyntaxStyles -> False}], "eebraket" -> TagBox[
+    RowBox[{"\[LeftAngleBracket]", 
+      TagBox[
+       RowBox[{
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]], ",", 
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]]}], 
+       Quantum`Notation`zz080BraArgs, Editable -> True, Selectable -> True, 
+       BaseStyle -> {ShowSyntaxStyles -> True}], "\[VerticalSeparator]", 
+      TagBox[
+       RowBox[{
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]], ",", 
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]]}], 
+       Quantum`Notation`zz080KetArgs, Editable -> True, Selectable -> True, 
+       BaseStyle -> {ShowSyntaxStyles -> True}], "\[RightAngleBracket]"}], 
+    Quantum`Notation`zz080BraKet, Editable -> False, Selectable -> False, 
+    BaseStyle -> {ShowSyntaxStyles -> False}], "eeebraket" -> TagBox[
+    RowBox[{"\[LeftAngleBracket]", 
+      TagBox[
+       RowBox[{
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]], ",", 
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]], ",", 
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]]}], 
+       Quantum`Notation`zz080BraArgs, Editable -> True, Selectable -> True, 
+       BaseStyle -> {ShowSyntaxStyles -> True}], "\[VerticalSeparator]", 
+      TagBox[
+       RowBox[{
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]], ",", 
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]], ",", 
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]]}], 
+       Quantum`Notation`zz080KetArgs, Editable -> True, Selectable -> True, 
+       BaseStyle -> {ShowSyntaxStyles -> True}], "\[RightAngleBracket]"}], 
+    Quantum`Notation`zz080BraKet, Editable -> False, Selectable -> False, 
+    BaseStyle -> {ShowSyntaxStyles -> False}], "bra" -> TagBox[
+    RowBox[{"\[LeftAngleBracket]", 
+      TagBox[
+      "\[Placeholder]", Quantum`Notation`zz080BraArgs, Editable -> True, 
+       Selectable -> True, BaseStyle -> {ShowSyntaxStyles -> True}], 
+      "\[VerticalSeparator]"}], Quantum`Notation`zz080Bra, Editable -> False, 
+    Selectable -> False, BaseStyle -> {ShowSyntaxStyles -> False}], "ebra" -> 
+  TagBox[
+    RowBox[{"\[LeftAngleBracket]", 
+      TagBox[
+       RowBox[{
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]]}], 
+       Quantum`Notation`zz080BraArgs, Editable -> True, Selectable -> True, 
+       BaseStyle -> {ShowSyntaxStyles -> True}], "\[VerticalSeparator]"}], 
+    Quantum`Notation`zz080Bra, Editable -> False, Selectable -> False, 
+    BaseStyle -> {ShowSyntaxStyles -> False}], "eebra" -> TagBox[
+    RowBox[{"\[LeftAngleBracket]", 
+      TagBox[
+       RowBox[{
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]], ",", 
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]]}], 
+       Quantum`Notation`zz080BraArgs, Editable -> True, Selectable -> True, 
+       BaseStyle -> {ShowSyntaxStyles -> True}], "\[VerticalSeparator]"}], 
+    Quantum`Notation`zz080Bra, Editable -> False, Selectable -> False, 
+    BaseStyle -> {ShowSyntaxStyles -> False}], "eeebra" -> TagBox[
+    RowBox[{"\[LeftAngleBracket]", 
+      TagBox[
+       RowBox[{
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]], ",", 
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]], ",", 
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]]}], 
+       Quantum`Notation`zz080BraArgs, Editable -> True, Selectable -> True, 
+       BaseStyle -> {ShowSyntaxStyles -> True}], "\[VerticalSeparator]"}], 
+    Quantum`Notation`zz080Bra, Editable -> False, Selectable -> False, 
+    BaseStyle -> {ShowSyntaxStyles -> False}], "norm" -> 
+  RowBox[{"\[LeftDoubleBracketingBar]", "\[Placeholder]", 
+     "\[RightDoubleBracketingBar]"}], "trace" -> RowBox[{
+     SubscriptBox["Tr", 
+      OverscriptBox["\[Placeholder]", "^"]], "[", "\[Placeholder]", "]"}], 
+  "ketbra" -> RowBox[{
+     TagBox[
+      RowBox[{"\[VerticalSeparator]", 
+        TagBox[
+        "\[Placeholder]", Quantum`Notation`zz080KetArgs, Editable -> True, 
+         Selectable -> True, BaseStyle -> {ShowSyntaxStyles -> True}], 
+        "\[RightAngleBracket]"}], Quantum`Notation`zz080Ket, Editable -> 
+      False, Selectable -> False, BaseStyle -> {ShowSyntaxStyles -> False}], 
+     "\[CenterDot]", 
+     TagBox[
+      RowBox[{"\[LeftAngleBracket]", 
+        TagBox[
+        "\[Placeholder]", Quantum`Notation`zz080BraArgs, Editable -> True, 
+         Selectable -> True, BaseStyle -> {ShowSyntaxStyles -> True}], 
+        "\[VerticalSeparator]"}], Quantum`Notation`zz080Bra, Editable -> 
+      False, Selectable -> False, BaseStyle -> {ShowSyntaxStyles -> False}]}],
+   "eketbra" -> RowBox[{
+     TagBox[
+      RowBox[{"\[VerticalSeparator]", 
+        TagBox[
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]], 
+         Quantum`Notation`zz080KetArgs, Editable -> True, Selectable -> True, 
+         BaseStyle -> {ShowSyntaxStyles -> True}], "\[RightAngleBracket]"}], 
+      Quantum`Notation`zz080Ket, Editable -> False, Selectable -> False, 
+      BaseStyle -> {ShowSyntaxStyles -> False}], "\[CenterDot]", 
+     TagBox[
+      RowBox[{"\[LeftAngleBracket]", 
+        TagBox[
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]], 
+         Quantum`Notation`zz080BraArgs, Editable -> True, Selectable -> True, 
+         BaseStyle -> {ShowSyntaxStyles -> True}], "\[VerticalSeparator]"}], 
+      Quantum`Notation`zz080Bra, Editable -> False, Selectable -> False, 
+      BaseStyle -> {ShowSyntaxStyles -> False}]}], "eeketbra" -> RowBox[{
+     TagBox[
+      RowBox[{"\[VerticalSeparator]", 
+        TagBox[
+         RowBox[{
+           SubscriptBox["\[Placeholder]", 
+            OverscriptBox["\[Placeholder]", "^"]], ",", 
+           SubscriptBox["\[Placeholder]", 
+            OverscriptBox["\[Placeholder]", "^"]]}], 
+         Quantum`Notation`zz080KetArgs, Editable -> True, Selectable -> True, 
+         BaseStyle -> {ShowSyntaxStyles -> True}], "\[RightAngleBracket]"}], 
+      Quantum`Notation`zz080Ket, Editable -> False, Selectable -> False, 
+      BaseStyle -> {ShowSyntaxStyles -> False}], "\[CenterDot]", 
+     TagBox[
+      RowBox[{"\[LeftAngleBracket]", 
+        TagBox[
+         RowBox[{
+           SubscriptBox["\[Placeholder]", 
+            OverscriptBox["\[Placeholder]", "^"]], ",", 
+           SubscriptBox["\[Placeholder]", 
+            OverscriptBox["\[Placeholder]", "^"]]}], 
+         Quantum`Notation`zz080BraArgs, Editable -> True, Selectable -> True, 
+         BaseStyle -> {ShowSyntaxStyles -> True}], "\[VerticalSeparator]"}], 
+      Quantum`Notation`zz080Bra, Editable -> False, Selectable -> False, 
+      BaseStyle -> {ShowSyntaxStyles -> False}]}], "eeeketbra" -> RowBox[{
+     TagBox[
+      RowBox[{"\[VerticalSeparator]", 
+        TagBox[
+         RowBox[{
+           SubscriptBox["\[Placeholder]", 
+            OverscriptBox["\[Placeholder]", "^"]], ",", 
+           SubscriptBox["\[Placeholder]", 
+            OverscriptBox["\[Placeholder]", "^"]], ",", 
+           SubscriptBox["\[Placeholder]", 
+            OverscriptBox["\[Placeholder]", "^"]]}], 
+         Quantum`Notation`zz080KetArgs, Editable -> True, Selectable -> True, 
+         BaseStyle -> {ShowSyntaxStyles -> True}], "\[RightAngleBracket]"}], 
+      Quantum`Notation`zz080Ket, Editable -> False, Selectable -> False, 
+      BaseStyle -> {ShowSyntaxStyles -> False}], "\[CenterDot]", 
+     TagBox[
+      RowBox[{"\[LeftAngleBracket]", 
+        TagBox[
+         RowBox[{
+           SubscriptBox["\[Placeholder]", 
+            OverscriptBox["\[Placeholder]", "^"]], ",", 
+           SubscriptBox["\[Placeholder]", 
+            OverscriptBox["\[Placeholder]", "^"]], ",", 
+           SubscriptBox["\[Placeholder]", 
+            OverscriptBox["\[Placeholder]", "^"]]}], 
+         Quantum`Notation`zz080BraArgs, Editable -> True, Selectable -> True, 
+         BaseStyle -> {ShowSyntaxStyles -> True}], "\[VerticalSeparator]"}], 
+      Quantum`Notation`zz080Bra, Editable -> False, Selectable -> False, 
+      BaseStyle -> {ShowSyntaxStyles -> False}]}], "su" -> 
+  SubscriptBox["\[Placeholder]", "\[Placeholder]"], "po" -> SuperscriptBox[
+    RowBox[{"(", "\[Placeholder]", ")"}], "\[Placeholder]"], "pow" -> 
+  SuperscriptBox[
+    RowBox[{"(", "\[Placeholder]", ")"}], "\[Placeholder]"], "si" -> RowBox[{
+     UnderoverscriptBox["\[Sum]", "\[Placeholder]", "\[Placeholder]"], 
+     "\[Placeholder]"}], "qs" -> RowBox[{
+     UnderoverscriptBox["\[Sum]", "\[Placeholder]", "\[Placeholder]"], 
+     "\[Placeholder]"}], "qp" -> TagBox[
+    RowBox[{
+      UnderoverscriptBox["\[CircleTimes]", 
+       TagBox[
+       "\[Placeholder]", Quantum`Notation`zz020TPNotationini, Editable -> 
+        True, Selectable -> True], 
+       TagBox[
+       "\[Placeholder]", Quantum`Notation`zz020TPNotationend, Editable -> 
+        True, Selectable -> True]], 
+      TagBox[
+      "\[Placeholder]", Quantum`Notation`zz020TPNotationdat, Editable -> True,
+        Selectable -> True]}], Quantum`Notation`zz020TPNotation, Editable -> 
+    False, Selectable -> False]},
+FrontEndVersion->"11.0 for Linux x86 (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 36197, 990, 1420, "Input"],
+Cell[36780, 1014, 9654, 171, 240, "Output"]
+}, Open  ]],
+Cell[46449, 1188, 120, 2, 32, "Input"]
+}
+]
+*)
+

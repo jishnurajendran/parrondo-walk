@@ -1,0 +1,11 @@
+\select@language {english}
+\contentsline {section}{\numberline {I}Introduction}{3}{section.1}
+\contentsline {subsection}{\numberline {I}Classical Random Walk}{3}{subsection.1.1}
+\contentsline {subsubsection}{\numberline {I}Random Walk on the Line}{3}{subsubsection.1.1.1}
+\contentsline {subsection}{\numberline {II}Discrete-time quantum walk }{4}{subsection.1.2}
+\contentsline {section}{\numberline {II}Parrondo's game}{11}{section.2}
+\contentsline {section}{\numberline {III}Parrondo's game using DTQW}{13}{section.3}
+\contentsline {section}{\numberline {IV}Entangled Quantum Walk}{17}{section.4}
+\contentsline {subsection}{\numberline {I}Mathematical Structure of Quantum Walks on an Infinite Line Using a Maximally Entangled Coin}{17}{subsection.4.1}
+\contentsline {subsection}{\numberline {II}Results for Quantum Walks on an Infinite Line Using a Maximally Entangled Coin}{20}{subsection.4.2}
+\contentsline {section}{\numberline {V}Conclusion \& future Work }{25}{section.5}

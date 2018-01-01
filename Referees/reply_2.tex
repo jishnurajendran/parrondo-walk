@@ -1,0 +1,243 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath, amsthm, latexsym, amssymb, graphicx, bold-extra, mathrsfs, frcursive}
+\usepackage{diagbox}
+\usepackage{float}
+\usepackage[pdftex]{color}
+\usepackage[T1]{fontenc}
+% Simplifies margin settings
+\usepackage{geometry}
+\geometry{margin=1in}
+\title{~~}
+\begin{document}
+%=======================================
+\begin{flushleft}
+Dear Editor,
+\end{flushleft}
+
+~We thank you for sending us the comments on the paper. Please find below a summary of changes made and a detailed response to all the comments and queries of the referees.
+\section*{Summary of changes made}
+\begin{enumerate}
+\item Abstract is updated with addition about 3-coin Parrando's game.
+\item All the Reference are rearranged in the correct order, other typos with equations are corrected and line about $P_R - P_L$ is corrected in the manuscript.
+\item A paragraph is added in the discussion section about 3-state coin(qutrit).
+\end{enumerate}
+\subsection*{Reply to the second report of Second Referee}
+\begin{enumerate}
+\item \textbf{The author reply regarding comparison with the corresponding Markovian
+random walk has missed Ref3's point. Of course we know that measuring
+a quantum walk at every step gives a classical random walk. What Ref3
+wanted was that the behavior of the classical random walk
+corresponding to the coins used here should be checked: does it give a
+Parrondo paradox with measurement after every step so it becomes fully
+classical? Or do the parameters for a quantum Parrondo paradox
+correspond to a non-paradox classical random walk?}\\
+
+We agree that we didn't do a through job to clarify this point in our previous  response. We try again in detail to clarify this query below.\\
+Lets start with an initial state, $$| \psi_0 \rangle= |0\rangle_p \otimes |10\rangle_{cc}$$
+and the Shift operator is 
+\begin{equation*}\label{shift_operator_two_spins}
+S_{EC} =  \sum_i |i+1 \rangle_{p} \langle i| \otimes |00\rangle_{cc} \langle 00|  
++ \sum_i |i\rangle_{p} \langle i| \otimes |01\rangle_{cc} \langle 01| 
++ \sum_i |i\rangle_{p} \langle i| \otimes |10\rangle_{cc} \langle 10|
++ \sum_i |i-1 \rangle_{p} \langle i| \otimes |11\rangle_{cc} \langle 11|
+\end{equation*}
+
+Parrondo's paradox is defined as when two games are played repeatedly results in a particular outcome will gives us an opposite outcome when played alternatively. Here a game X, defined as operating the unitary operator $A$ in coin 1 repeatedly($AAAA\cdots$) and operating $B$ in coin 2($BBBB\cdots$), gives us a losing outcome when played repeatedly. We consider the 2 coin unitary operator as
+\begin{equation*}
+X=A \otimes B =C_{EC}=U(-51,45,0) \otimes U(0,88,-16)
+\end{equation*}
+for first four steps operating coin X are shown in the Table.\ref{tab1}\\
+For Coin 1:AAAA...\\
+~~~For Coin 2:BBBB...
+\begin{center}
+\begin{table}[H]
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline 
+\rule[-1ex]{0pt}{2.5ex} \diagbox[width=10em]{Time Steps }{Position }& -3 & -2 & -1 & 0 & 1 & 2 & 3 \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} t=0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} t=1 & 0 & 0 & 0.92289 & 0.07700 & 0.00009 & 0 & 0 \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} t=2 & 0 & 0.00112 & 0.92299 & 0.07588 & 0.00000 & 0.00000 & 0 \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} t=3 & 0.00000 & 0.92289 & 0.07700 & 0.00009 & 0.00000 & 0.00000 & 0.00000 \\ 
+\hline 
+\end{tabular} 
+\caption{For Coin 1:AAAA... and For Coin 2:BBBB...}
+\label{tab1}
+\end{table}
+\end{center}
+at t=1, time-step 1 we see that $| \psi_1 \rangle$ is a superposition of $| -1\rangle$, $| 0\rangle$ and $| 1\rangle$ position states in particular, each with different amplitudes. We make a measurement and superposed state collapses to any of the $| -1\rangle$, $| 0\rangle$, $| 1\rangle$ state. Lets say we go with the max probability i.e, $|-1\rangle$, Next we again evolve the quantum walk from $|-1\rangle$ state, apply $X$ and shift and again at t=2 the walker state is in the superposition of $|-2\rangle$, $|-1\rangle$, $|0\rangle$ and repeat the the same process further.
+\vspace{2pt}
+Now considering the two coin operators 
+\begin{equation*}
+X=A \otimes B =C_{EC}=U(-51,45,0) \otimes U(0,88,-16)
+\end{equation*}
+\begin{equation*}
+Y=B \otimes A =C'_{EC}=U(0,88,-16) \otimes U(-51,45,0)
+\end{equation*}
+when the coins X and Y are operated alternatively XYXY...
+i.e, \\For Coin 1:ABAB...\\
+For Coin 2:BABA...
+we obtain Table.\ref{tab2} for first four steps
+\begin{center}
+\begin{table}[H]
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline 
+\rule[-1ex]{0pt}{2.5ex} \diagbox[width=10em]{Time Steps }{Position }& -3 & -2 & -1 & 0 & 1 & 2 & 3 \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} t=0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} t=1 & 0 & 0 & 0.92289 & 0.07700 & 0.00009 & 0 & 0 \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} t=2 & 0 & 0.00009 & 0.07700 & 0.92289 & 0.00000 & 0.00000 & 0 \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} t=3 & 0.00000 & 0.00000 & 0.92289 & 0.07700 & 0.00009 & 0.00000 & 0.00000 \\ 
+\hline 
+\end{tabular} 
+\caption{For Coin 1:ABAB... and For Coin 2:BABA...}
+\label{tab2}
+\end{table}
+\end{center}
+at t=1, time-step 1 after applying operator $X$ we see that $| \psi_1 \rangle$ is a superposition of $| -1\rangle$, $| 0\rangle$ and $| 1\rangle$ position states in particular, each with different amplitudes. We make a measurement and superposed state collapses to any of the $| -1\rangle$, $| 0\rangle$, $| 1\rangle$ state. Lets say again we go with the max probability i.e, $|-1\rangle$, Next we again evolve the quantum walk from $|-1\rangle$ state, but now we apply $Y$ and shift and here at t=2 the walker state is in the superposition of $|-2\rangle$, $|-1\rangle$, $|0\rangle$ and repeating the the same process further one can see the probabilities associated with time-step 3 and 4 in Table.\ref{tab2} .(which is different from that of Table.\ref{tab1}).\\
+
+If you measure after each step you collapse the superposition across the position space into a particular position. One can expect a different evolution that the above one since the process of measurement involves certain probabilities for each position when they are collapsed to a particular position. Thus it is possible that one may or may not obtain a Parrando's paradox for each random walk using the above mentioned coins as each different walk cannot always result in a Parrando's paradox.
+
+\item \textbf{The abstract should have been updated to include mention of the
+3-state coin additions.}\\
+A line regarding 3-coin "Further with 3-coin initial state also we can observe a genuine Parrondo's paradox with quantum walks which shows the need of asymmetry need in the initial state." is added to the abstract.
+\item \textbf{The references are out of order in the first paragraph: $[3,6,14]$}\\
+References are rearranged properly in the first paragraph.
+\item \textbf{page 2, "expectation value may be positive but $P_R - P_L$ may be
+negative this would be an absurd result." typo, and this does not
+reflect Ref3's comment that this is not absurd, and occurs for
+classical processes, too.}\\
+This was mistakenly included in the revised manuscript and we now correct it in the latest version of the manuscript in page 2 first paragraph.
+\item \textbf{bottom of page 2, brackets missing in equation that follows "which
+using Eq.4, gives"}\\
+Missing brackets for the equation is added in page 2 right after "which using Eq.4, gives" 
+\item \textbf{Ref2's point about a 3-state coin was misunderstood. The two coins
+used originally are effectively a 4-state coin space on which two coin
+(4D) operators are applied alternately. So what about a 3-state coin
+space? Is it possible to get a Parrondo paradox using one 3-state coin
+with different coin operators A and B? Using a 6-state coin space as
+they have done incorporates the 4-state coin space as a special case,
+so of course it can be made to work and it doesn't tell us anything
+new.}\\
+For a 3-state coin, the 'coin' is a qutrit, defined as $| \psi \rangle_C= \alpha|0\rangle + \beta|1 \rangle + \gamma|2 \rangle$.\\
+The qutrit does not have any classical analog and is a rather esoteric comparison. It deviates from our main focus of achieving a genuine Parrando's paradox with quantum walks. we want to make an analogy with classical case of Parrando's games, a qutrit does not allow that. It is a separate new problem in itself. In our revised manuscript we have a paragraph in the discussion section where we deal with this question, why 3-state coin and any Parrando's paradox obtained will not have any analogy with classical case.
+\item \textbf{There is the observation that probably it is some asymmetry that
+allows a Parrondo paradox to occur, but the extra work does not pin
+down how or where, as a systematic study should be able to do. Finding
+the minimum case (the reason for suggesting to try a 3-state coin)
+would be a good way to start.}\\
+We showed that an asymmetry in the initial coin state or the else in the shift operator is necessary to obtain the Parrando's paradox with quantum walks. We showed  introducing asymmetry in the initial coin state has an important role in obtaining a genuine Parrando's paradox. Also when initial coin state is symmetric there should be an asymmetry in the shift operator that is need for a genuine Parranod's paradox. Also a 3-state coin, a qutrit, does not have any classical analog in Parrando's games and hence it deviates from our primary focus on Parrando's paradox.  
+
+\item \textbf{Finding (numerically) examples of a Parrondo paradox are not
+sufficient for a Rap Com, the result needs more understanding to back
+it up and allow the behavior to be exploited.}\\
+We not only numerically find but analyzed in detail using initial states(Asymmetric, entangled and 3-coin state) and shift operator the reason behind Parrando's paradox and we also give the reason why measuring at each time-step may or may not give us a genuine Parrando's paradox as mentioned above. 
+\end{enumerate}
+
+\subsection*{Reply to the Second report of Third Referee}
+\begin{enumerate}
+\item \textbf{The authors did not address two of my objections to the previous
+version. I suggested to change the discussion about the criteria for
+defining losing and winning games, $P_R-P_L$, but they have kept almost
+the same sentences of the first version.}\\
+This was mistakenly included in the revised manuscript and we now correct it in the latest version of the manuscript in page 2 first paragraph.
+
+\item \textbf{I suggested to comment on the classical random walk arising from
+monitoring the walker. From their reply I guess that this classical
+random walk is symmetric, something that it is not completely trivial.
+Is that so in the three cases, game A, B and the combination? This is
+not clear to me and the authors have not included any comment about
+this issue in the new version.}\\
+We agree that we didn't do a through job to clarify this point in our previous  response. We try again in detail to clarify this query below.\\
+Lets start with an initial state, $$| \psi_0 \rangle= |0\rangle_p \otimes |10\rangle_{cc}$$
+and the Shift operator is 
+\begin{equation*}\label{shift_operator_two_spins_1}
+S_{EC} =  \sum_i |i+1 \rangle_{p} \langle i| \otimes |00\rangle_{cc} \langle 00|  
++ \sum_i |i\rangle_{p} \langle i| \otimes |01\rangle_{cc} \langle 01| 
++ \sum_i |i\rangle_{p} \langle i| \otimes |10\rangle_{cc} \langle 10|
++ \sum_i |i-1 \rangle_{p} \langle i| \otimes |11\rangle_{cc} \langle 11|
+\end{equation*}
+
+Parrondo's paradox is defined as when two games are played repeatedly results in a particular outcome will gives us an opposite outcome when played alternatively. Here a game X, defined as operating the unitary operator $A$ in coin 1 repeatedly($AAAA\cdots$) and operating $B$ in coin 2($BBBB\cdots$), gives us a losing outcome when played repeatedly. We consider the 2 coin unitary operator as
+\begin{equation*}
+X=A \otimes B =C_{EC}=U(-51,45,0) \otimes U(0,88,-16)
+\end{equation*}
+for first four steps operating coin X are shown in the Table.\ref{tab_1}\\
+For Coin 1:AAAA...\\
+~~~For Coin 2:BBBB...
+\begin{center}
+\begin{table}[H]
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline 
+\rule[-1ex]{0pt}{2.5ex} \diagbox[width=10em]{Time Steps }{Position }& -3 & -2 & -1 & 0 & 1 & 2 & 3 \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} t=0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} t=1 & 0 & 0 & 0.92289 & 0.07700 & 0.00009 & 0 & 0 \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} t=2 & 0 & 0.00112 & 0.92299 & 0.07588 & 0.00000 & 0.00000 & 0 \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} t=3 & 0.00000 & 0.92289 & 0.07700 & 0.00009 & 0.00000 & 0.00000 & 0.00000 \\ 
+\hline 
+\end{tabular} 
+\caption{For Coin 1:AAAA... and For Coin 2:BBBB...}
+\label{tab_1}
+\end{table}
+\end{center}
+at t=1, time-step 1 we see that $| \psi_1 \rangle$ is a superposition of $| -1\rangle$, $| 0\rangle$ and $| 1\rangle$ position states in particular, each with different amplitudes. We make a measurement and superposed state collapses to any of the $| -1\rangle$, $| 0\rangle$, $| 1\rangle$ state. Lets say we go with the max probability i.e, $|-1\rangle$, Next we again evolve the quantum walk from $|-1\rangle$ state, apply $X$ and shift and again at t=2 the walker state is in the superposition of $|-2\rangle$, $|-1\rangle$, $|0\rangle$ and repeat the the same process further.
+\vspace{2pt}
+Now considering the two coin operators 
+\begin{equation*}
+X=A \otimes B =C_{EC}=U(-51,45,0) \otimes U(0,88,-16)
+\end{equation*}
+\begin{equation*}
+Y=B \otimes A =C'_{EC}=U(0,88,-16) \otimes U(-51,45,0)
+\end{equation*}
+when the coins X and Y are operated alternatively XYXY...
+i.e, \\For Coin 1:ABAB...\\
+For Coin 2:BABA...
+we obtain Table.\ref{tab_2} for first four steps
+\begin{center}
+\begin{table}[H]
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline 
+\rule[-1ex]{0pt}{2.5ex} \diagbox[width=10em]{Time Steps }{Position }& -3 & -2 & -1 & 0 & 1 & 2 & 3 \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} t=0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} t=1 & 0 & 0 & 0.92289 & 0.07700 & 0.00009 & 0 & 0 \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} t=2 & 0 & 0.00009 & 0.07700 & 0.92289 & 0.00000 & 0.00000 & 0 \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} t=3 & 0.00000 & 0.00000 & 0.92289 & 0.07700 & 0.00009 & 0.00000 & 0.00000 \\ 
+\hline 
+\end{tabular} 
+\caption{For Coin 1:ABAB... and For Coin 2:BABA...}
+\label{tab_2}
+\end{table}
+\end{center}
+at t=1, time-step 1 after applying operator $X$ we see that $| \psi_1 \rangle$ is a superposition of $| -1\rangle$, $| 0\rangle$ and $| 1\rangle$ position states in particular, each with different amplitudes. We make a measurement and superposed state collapses to any of the $| -1\rangle$, $| 0\rangle$, $| 1\rangle$ state. Lets say again we go with the max probability i.e, $|-1\rangle$, Next we again evolve the quantum walk from $|-1\rangle$ state, but now we apply $Y$ and shift and here at t=2 the walker state is in the superposition of $|-2\rangle$, $|-1\rangle$, $|0\rangle$ and repeating the the same process further one can see the probabilities associated with time-step 3 and 4 in Table.\ref{tab2} .(which is different from that of Table.\ref{tab1}).\\
+
+If you measure after each step you collapse the superposition across the position space into a particular position. One can expect a different evolution that the above one since the process of measurement involves certain probabilities for each position when they are collapsed to a particular position. Thus it is possible that one may or may not obtain a Parrando's paradox for each random walk using the above mentioned coins as each different walk cannot always result in a Parrando's paradox.
+\item \textbf{Finally, my suggestion of discussing the role of two coins in the
+paradox has been partially addressed. Nevertheless, I find the
+discussion in section IV a bit obscure and too much based on specific
+simulations for certain values of the parameters.}
+We thank the referee for saying that it has been partially addressed. We showed that an asymmetry in the initial coin state or the else in the shift operator is necessary to obtain the Parrando's paradox with quantum walks. We showed  introducing asymmetry in the initial coin state has an important role in obtaining a genuine Parrando's paradox. Also when initial coin state is symmetric there should be an asymmetry in the shift operator that is need for a genuine Parranod's paradox. A single coin cannot incorporate an asymmetry and hence the need of two coins. We also showed that the asymmetry in the initial state is needed in case of 3 coins continuing the trend and reinforcing the explanation.
+
+\item \textbf{Consequently, I have to reject the paper again, since most of my
+arguments in the first report also apply to the new version of the
+paper.}\\
+We hope this detailed reply will be enough for reconsidering our results and its relevance.
+\end{enumerate}
+
+%=======================================
+
+\end{document}
